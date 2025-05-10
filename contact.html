@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Accueil</title>
+  <title>Page 1</title>
 
   <!-- Materialize CSS -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet" />
@@ -16,18 +16,18 @@
 
   <!-- Barre de navigation -->
   <nav>
-    <div class="nav-wrapper teal">
+    <div class="nav-wrapper red lighten-3">
       <!-- Menu burger à gauche -->
       <a href="#" data-target="mobile-nav" class="sidenav-trigger left">
         <i class="material-icons">menu</i>
       </a>
 
-      <!-- Logo centré -->
-      <a href="index.html" class="brand-logo center">Mon Site</a>
+      <!-- Logo centré (mon site) non cliquable -->
+      <span class="brand-logo center">Mon Site</span>
 
       <!-- Menu horizontal desktop à droite -->
       <ul class="right hide-on-med-and-down" id="menu-desktop">
-        <li><a href="index.html">Accueil</a></li>
+        <li><a href="index.html">Accueil</a></li> <!-- Ce lien est visible sur toutes les pages -->
         <li><a href="page1.html">Page 1</a></li>
         <li><a href="page2.html">Page 2</a></li>
         <li><a href="page3.html">Page 3</a></li>
@@ -49,8 +49,8 @@
 
   <!-- Contenu principal -->
   <div class="container">
-    <h1 class="center-align">Bienvenue</h1>
-    <p class="flow-text">Utilisez le menu pour visiter les autres pages.</p>
+    <h1 class="center-align">Bienvenue sur la Page 1</h1>
+    <p class="flow-text">Voici le contenu de la première page.</p>
   </div>
 
   <!-- jQuery -->
