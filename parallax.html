@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<!-- Définit le type de document comme HTML5 -->
+
+<html lang="fr">
+<!-- Balise racine du document HTML avec la langue française définie -->
+
+<head>
+  <!-- La section head contient des métadonnées et des liens vers des ressources externes -->
+  
+  <meta charset="UTF-8">
+  <!-- Définit l'encodage des caractères comme UTF-8 pour supporter les accents et caractères spéciaux -->
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Assure que le site s'affiche correctement sur les appareils mobiles -->
+  
+  <title>Mon Portfolio</title>
+  <!-- Définit le titre qui apparaît dans l'onglet du navigateur -->
+
+  <!-- Importation de jQuery (bibliothèque JavaScript qui simplifie la manipulation du DOM) -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  
+  <!-- Importation du CSS de Materialize (framework CSS/JS pour créer des interfaces modernes) -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet" />
+  
+  <!-- Importation des icônes de Materialize depuis Google Fonts -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+  <!-- Lien vers notre feuille de style personnalisée -->
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Corps de la page -->
+
+  <!-- Bouton hamburger fixe qui ouvre/ferme le menu -->
+  <a href="#" data-target="mobile-nav" class="sidenav-trigger" id="menu-toggle">
+  <i class="material-icons">menu</i>
+</a>
+
+  <!-- Menu latéral mobile (sidenav) avec des liens de navigation -->
+  <ul class="sidenav" id="mobile-nav">
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="cv.html">CV</a></li>
+    <li><a href="genially.html">Ressources Genially</a></li>
+    <li><a href="videos.html">Vidéos</a></li>
+    <li><a href="fiches.html">Fiches pédagogiques</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+
+  <!-- Indicateurs de navigation par section (points sur le côté droit) -->
+  <div class="section-nav">
+    <a href="#section1" class="active"></a>
+    <a href="#section2"></a>
+    <a href="#section3"></a>
+  </div>
+
+  <!-- Les trois sections principales de la page avec l'effet de défilement parallax -->
+  <section id="section1">
+    <div class="fade-text">
+      <div class="container">
+        <div class="row">
+          <div class="col s12 center-align">
+            <img src="https://via.placeholder.com/150" alt="Votre photo" class="circle responsive-img">
+            <h2>Bienvenue sur mon portfolio</h2>
+            <p class="flow-text">Je suis enseignant et créateur de ressources pédagogiques</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section id="section2">
+    <div class="fade-text">
+      <div class="container">
+        <div class="row">
+          <div class="col s12 center-align">
+            <h2>Mes compétences</h2>
+            <div class="row">
+              <div class="col s12 m4">
+                <div class="card content-card">
+                  <div class="card-content">
+                    <i class="material-icons large">school</i>
+                    <h4>Pédagogie</h4>
+                    <p>Création de ressources adaptées aux besoins des élèves</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col s12 m4">
+                <div class="card content-card">
+                  <div class="card-content">
+                    <i class="material-icons large">movie</i>
+                    <h4>Multimédia</h4>
+                    <p>Conception de contenus interactifs et vidéos pédagogiques</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col s12 m4">
+                <div class="card content-card">
+                  <div class="card-content">
+                    <i class="material-icons large">devices</i>
+                    <h4>Numérique</h4>
+                    <p>Maîtrise des outils numériques pour l'enseignement</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section id="section3">
+    <div class="fade-text">
+      <div class="container">
+        <div class="row">
+          <div class="col s12 center-align">
+            <h2>Découvrez mon travail</h2>
+            <p class="flow-text">Explorez mes différentes ressources et créations</p>
+            <div class="row">
+              <div class="col s12 m4">
+                <a href="cv.html" class="btn-large custom-btn waves-effect waves-light">Mon CV</a>
+              </div>
+              <div class="col s12 m4">
+                <a href="genially.html" class="btn-large custom-btn waves-effect waves-light">Ressources</a>
+              </div>
+              <div class="col s12 m4">
+                <a href="contact.html" class="btn-large custom-btn waves-effect waves-light">Contact</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer (pied de page) -->
+  <footer class="page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col s12">
+          <h5 class="white-text">Votre Nom</h5>
+          <p class="grey-text text-lighten-4">© 2025 Tous droits réservés</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Importation du JavaScript de Materialize pour les fonctionnalités interactives -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  
+  <!-- Importation de notre script JavaScript personnalisé -->
+  <script src="js/common.js"></script>
+
+  <!-- Script pour l'effet de fondu au défilement -->
+  <script>
+    // Configuration de l'observateur d'intersection
+    const options = {
+      threshold: 0.4  // L'effet se déclenche quand 40% de l'élément est visible
+    };
+
+    // Crée un observateur qui surveille quand les éléments entrent dans la vue
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // Si l'élément entre dans la vue, ajoute la classe 'visible'
+          entry.target.classList.add('visible');
+        } else {
+          // Si l'élément sort de la vue, retire la classe 'visible'
+          entry.target.classList.remove('visible');
+        }
+      });
+    }, options);
+
+    // Applique l'observateur à tous les éléments ayant la classe 'fade-text'
+    document.querySelectorAll('.fade-text').forEach(el => {
+      observer.observe(el);
+    });
+    
+    // Mise à jour des indicateurs de navigation lors du défilement
+    window.addEventListener('scroll', function() {
+      // Récupère toutes les sections
+      const sections = document.querySelectorAll('section');
+      // Récupère tous les points de navigation
+      const navItems = document.querySelectorAll('.section-nav a');
+      
+      // Détermine quelle section est actuellement visible
+      let currentSection = 0;
+      sections.forEach((section, index) => {
+        const rect = section.getBoundingClientRect();
+        // Si le haut de la section est visible dans la fenêtre
+        if (rect.top <= window.innerHeight/2 && rect.bottom >= window.innerHeight/2) {
+          currentSection = index;
+        }
+      });
+      
+      // Met à jour la classe active sur le point de navigation correspondant
+      navItems.forEach((item, index) => {
+        if (index === currentSection) {
+          item.classList.add('active');
+        } else {
+          item.classList.remove('active');
+        }
+      });
+    });
+  </script>
+
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Initialisation directe de la sidenav
+    var elems = document.querySelectorAll('.sidenav');
+    var instances = M.Sidenav.init(elems);
+    
+    // Gestionnaire d'événement pour le bouton menu
+    document.getElementById('menu-toggle').addEventListener('click', function(e) {
+      e.preventDefault();
+      var instance = M.Sidenav.getInstance(document.getElementById('mobile-nav'));
+      instance.open();
+    });
+  });
+</script>
+
+</body>
+</html>
