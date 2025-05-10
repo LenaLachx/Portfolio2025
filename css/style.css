@@ -2,8 +2,18 @@
 body, html {
   margin: 0;          /* Supprime les marges par défaut */
   padding: 0;         /* Supprime les rembourrages par défaut */
-  font-family: sans-serif;   /* Définit la police sans-serif pour tout le site */
+  font-family: ba;   /* Définit la police sans-serif pour tout le site */
   scroll-behavior: smooth;   /* Permet un défilement fluide lors de la navigation */
+}
+
+/* Police du titre principal */
+h1 {
+font-family: 'Libre Baskerville',serif;
+}
+
+/* Police pour le reste du texte */
+h2, h3, h4, h5, h6, p, a {
+  font-family: 'Arial',sans-serif;
 }
 
 /* ========== STYLES DES SECTIONS PARALLAX ========== */
@@ -20,6 +30,9 @@ section {
   box-sizing: border-box;  /* Inclut le padding dans la largeur totale de l'élément */
 }
 
+#section0 {
+  background-color: #ffdf90;  /* Couleur de fond jaune */
+}
 /* Styles spécifiques pour chaque section avec dégradés de couleurs différents */
 #section1 {
   background: linear-gradient(to bottom, #ffdf90, #f18192);  /* Dégradé rose vers violet */
