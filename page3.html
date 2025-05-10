@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page 1</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Même menu sur chaque page pour la navigation -->
+  <nav>
+    <div class="nav-wrapper teal">
+      <a href="index.html" class="brand-logo center">Mon Site</a>
+      <ul id="menu-desktop" class="right hide-on-med-and-down"> <!-- ID changé ici -->
+        <li><a href="page1.html">Page 1</a></li>
+        <li><a href="page2.html">Page 2</a></li>
+        <li><a href="page3.html">Page 3</a></li>
+        <li><a href="page4.html">Page 4</a></li>
+        <li><a href="page5.html">Page 5</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Contenu propre à cette page -->
+  <div class="container">
+    <h1 class="center-align">Bienvenue sur la Page 1</h1>
+    <p class="flow-text">Voici le contenu de la première page.</p>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="js/script.js"></script>
+  
+  <script>
+    $(document).ready(function () {
+      // Récupérer l'URL actuelle de la page
+      var currentPage = window.location.pathname;
+
+      // Ajouter la classe "active" au lien correspondant
+      $('#menu-desktop a').each(function () {
+        if (this.href.indexOf(currentPage) !== -1) {
+          $(this).parent().addClass('active');
+        }
+      });
+
+      // Initialiser le menu mobile
+      $('.sidenav').sidenav();
+    });
+  </script>
+</body>
+</html>

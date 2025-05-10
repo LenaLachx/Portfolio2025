@@ -1,0 +1,30 @@
+/* Exemple de style personnalisé */
+body {
+  background-color: #f9f9f9;
+}
+h1 {
+  color: #333;
+  font-family: Arial, sans-serif;
+}
+h2 {
+  color: #666;
+  font-family: Arial, sans-serif;
+}
+p {
+  color: #444;
+  font-family: Arial, sans-serif;
+}
+p {
+  line-height: 1.6;
+}
+p {
+  margin-bottom: 20px;
+}
+p {
+  font-size: 16px;
+}
+/* Style pour le lien actif dans le menu */
+.active {
+  background-color: #00897b; /* Couleur de fond pour l'élément actif */
+  color: white; /* Texte blanc */
+}
