@@ -8,6 +8,7 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
   <link href="css/jeux.css" rel="stylesheet">
+  <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.js"></script>
 </head>
 <body class="jeux-page">
   <!-- Bouton hamburger fixe qui ouvre/ferme le menu -->
@@ -26,20 +27,21 @@
     <li><a href="contact.html">Contact</a></li>
   </ul>
 
-  <div class="container">
-    <!-- Titre de la page -->
-    <h1 class="jeux-title">Serious Games</h1>
-    
-    <!-- Présentation -->
-    <div class="presentation-card">
-      <p class="flow-text">
-        Les serious games sont des jeux conçus pour un objectif principal autre que le simple divertissement. Découvrez ci-dessous mes créations de jeux éducatifs.
-      </p>
-    </div>
+  <div class="main-content">
+    <div class="container">
+      <!-- Section présentation -->
+      <section id="presentation" class="section">
+        <div class="row">
+          <div class="col s12 center-align">
+            <img src="images/RenPy-logo.avif" style="width: 45%; height: auto; display: block; margin: 0 auto;">
+            <h1 style="color: #f18192; font-size: 110px;margin-top: 60px; margin-bottom: -60px;">Mon serious Game</h1>
+            <dotlottie-player src="https://lottie.host/81cfe70f-f5ed-4644-9be5-ca541db97452/Tnm1sGjmqa.lottie" background="transparent" speed="1" style="width: 200px; height: 300px; display: block; margin: auto; margin-bottom: 10px;" loop autoplay></dotlottie-player>
+          </div>
+        </div>
     
     <!-- Section du jeu Ren'Py -->
     <div class="game-section">
-      <h2 class="section-title">Titre de votre jeu Ren'Py</h2>
+      <h2 class="section-title">Hoaxbuster: Chasseur de Fake news</h2>
       
       <div class="game-description">
         <p>Description de votre jeu : objectifs pédagogiques, public cible, contexte, etc.</p>
@@ -48,7 +50,7 @@
       <!-- Capture d'écran avec bouton de lancement simplifié -->
       <div class="game-screenshot-container">
         <!-- Remplacez le chemin ci-dessous par le chemin vers votre capture d'écran -->
-        <img src="images/capture-jeu.png" alt="Capture d'écran du jeu" class="game-screenshot">
+        <img src="images/capture-jeu.png" alt="Capture d'écran du jeu" class="game-screenshot" style="width: 100%; height: auto;">
         <a href="Jeu RenPy/UE85-Hoaxbuster/index.html" target="_blank" class="game-btn fixed-btn">Jouer</a>
       </div>
       

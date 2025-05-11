@@ -8,7 +8,7 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
   <link href="css/genially.css" rel="stylesheet">
-  
+  <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.js"></script>
 </head>
 <body class="genially-page">
   <!-- Menu hamburger -->
@@ -27,63 +27,85 @@
     <li><a href="contact.html">Contact</a></li>
   </ul>
 
-  <div class="container">
-    <!-- Titre de la page -->
-    <h1 class="genially-title">Mes ressources Genially</h1>
-    
-    <!-- Présentation -->
-    <div class="presentation-card">
-      <p class="flow-text">
-        Genially est un outil de création de contenu interactif qui permet de concevoir des présentations, infographies, jeux, et bien plus encore. Découvrez ci-dessous quelques-unes de mes créations.
-      </p>
-    </div>
-    
-    <!-- Carrousel simple -->
-    <h2 class="section-title">Mes créations</h2>
-    
-    <div class="carousel-container">
-      <!-- Slide 1 -->
-      <div class="carousel-slide active">
-        <div class="genially-container">
-          <iframe title="V2.Serious Game - Range les jouets dans le supermarché" frameborder="0" src="https://view.genially.com/6820b5c7d11e376ebb75af5c" allowscriptaccess="always" allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe>
+  <div class="main-content">
+    <div class="container">
+      <!-- Section présentation -->
+      <section id="presentation" class="section">
+        <div class="row">
+          <div class="col s12 center-align">
+            <img src="images/genially-logo.png" style="width: 30%; height: auto; display: block; margin: 0 auto;">
+            <h1 style="color: #f18192; font-size: 110px;margin-top: 60px; margin-bottom: -60px;">Mes créations Genially</h1>
+            <dotlottie-player src="https://lottie.host/81cfe70f-f5ed-4644-9be5-ca541db97452/Tnm1sGjmqa.lottie" background="transparent" speed="1" style="width: 200px; height: 300px; display: block; margin: auto; margin-bottom: 10px;" loop autoplay></dotlottie-player>
+          </div>
         </div>
-        <h3 class="slide-title">Serious Game - Range les jouets</h3>
-        <p class="slide-description">Un jeu éducatif pour apprendre à ranger et catégoriser les jouets.</p>
-      </div>
-      
-      <!-- Slide 2 (à remplacer par votre contenu) -->
-      <div class="carousel-slide">
-        <div class="genially-container">
-          <iframe title="Exemple 2" frameborder="0" src="https://view.genially.com/6820b5d04b2a805b68640a48" type="text/html" type="text/html" allowscriptaccess="always" allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe>
-        </div>
-        <h3 class="slide-title">Mise en situation - Communication avec les familles</h3>
-        <p class="slide-description">Description de votre deuxième création.</p>
-      </div>
+        
+        <div class="carousel-container">
+          <!-- Flèches fixes positionnées par rapport au conteneur principal -->
+          <div class="carousel-arrow left-arrow">
+            <i class="material-icons">chevron_left</i>
+          </div>
+          
+          <div class="carousel-arrow right-arrow">
+            <i class="material-icons">chevron_right</i>
+          </div>
 
-      <!-- Slide 3 (à remplacer par votre contenu) -->
-      <div class="carousel-slide">
-        <div class="genially-container">
-          <iframe title="Exemple 3" frameborder="0" src="https://view.genially.com/6820b5d88bae7b132abecbdd" type="text/html" type="text/html" allowscriptaccess="always" allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe>
-        </div>
-        <h3 class="slide-title">Mise en situation - Aménagement de l'espace</h3>
-        <p class="slide-description">Description de votre deuxième création.</p>
-      </div>
-      
-      <!-- Slide 3 (à remplacer par votre contenu) -->
-      <div class="carousel-slide">
-        <div class="genially-container">
-          <iframe title="Exemple 4" frameborder="0" src="https://view.genially.com/6795f03875e563c01372e19f" allowscriptaccess="always" allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe>
-        </div>
-        <h3 class="slide-title">Titre de votre troisième Genially</h3>
-        <p class="slide-description">Description de votre troisième création.</p>
-      </div>
+          
+          <!-- Wrapper pour les slides -->
+          <div class="carousel-slides-wrapper">
+            <!-- Slide 1 -->
+            <div class="carousel-slide">
+                 <h3 class="slide-title" style="margin-top: 60px;">Analyse d'un diaporama</h3>
+                 <h3 class="slide-title2">Les principes de Mayer</h3>
+              <div class="genially-container">
+                <iframe title="Exemple 1" frameborder="0" src="https://view.genially.com/6795f03875e563c01372e19f" allowscriptaccess="always" allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe>
+              </div>
+              <div class="card-presentation">
+                <h4 class="slide-subtitle" style="margin-top: 20px;">Premier Genially créé en Master 1</h4>
+                <p class="slide-description" style="margin-top: -10px;">Analyse critique d'un diaporama selon les principes de Mayer, mettant en évidence les bonnes pratiques et les points à améliorer.</p>
+              </div>
+            </div>
 
-      
-      <!-- Boutons de navigation -->
-      <div class="carousel-buttons">
-        <button id="prev-btn" class="carousel-btn">Précédent</button>
-        <button id="next-btn" class="carousel-btn">Suivant</button>
-      </div>
+            <!-- Slide 2 -->
+            <div class="carousel-slide active">
+                <h3 class="slide-title" style="margin-top: 60px;">Serious Game</h3>
+                <h3 class="slide-title2">Rangeons les jouets dans le supermarché</h3>
+              <div class="genially-container">
+                <iframe title="Exemple 2" frameborder="0" src="https://view.genially.com/6820b5c7d11e376ebb75af5c" allowscriptaccess="always" allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe>
+              </div>
+              <div class="card-presentation">
+                <h4 class="slide-subtitle" style="margin-top: 20px;">Ressource développée dans le cadre d'un partenariat avec l'association Artemisia Egalité</h4>
+                <p class="slide-description" style="margin-top: -10px;">Jeu destiné aux professionnels de l'éducation pour les sensibiliser à l’impact des jouets sur la construction et l’expression des genres dès la petite enfance.</p>
+              </div>
+            </div>
+            
+            <!-- Slide 3 -->
+            <div class="carousel-slide">
+                <h3 class="slide-title" style="margin-top: 60px;">Mise en situation</h3>
+                <h3 class="slide-title2">Communication avec les familles</h3>
+              <div class="genially-container">
+                <iframe title="Exemple 3" frameborder="0" src="https://view.genially.com/6820b5d04b2a805b68640a48" type="text/html" type="text/html" allowscriptaccess="always" allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe>
+              </div>
+              <div class="card-presentation">
+                <h4 class="slide-subtitle" style="margin-top: 20px;">Ressource développée dans le cadre d'un partenariat avec l'association Artemisia Egalité</h4>
+                <p class="slide-description" style="margin-top: -10px;">Scénarios interactifs aidant les professionnels de la petite enfance à développer des stratégies de communication avec les familles pour promouvoir l'égalité de genre.</p>
+              </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="carousel-slide">
+                <h3 class="slide-title" style="margin-top: 60px;">Mise en situation</h3>
+                <h3 class="slide-title2">Aménagement de l'espace</h3>
+              <div class="genially-container">
+                <iframe title="Exemple 4" frameborder="0" src="https://view.genially.com/6820b5d88bae7b132abecbdd" type="text/html" type="text/html" allowscriptaccess="always" allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe>
+              </div>
+              <div class="card-presentation">
+                <h4 class="slide-subtitle" style="margin-top: 20px;">Ressource développée dans le cadre d'un partenariat avec l'association Artemisia Egalité</h4>
+                <p class="slide-description" style="margin-top: -10px;">Scénarios interactifs aidant les professionnels de la petite enfance à développer des stratégies dans l'aménagement de l'espace de leur structures pour favoriser l'égalité de genre.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   </div>
   
@@ -102,64 +124,69 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src="js/common.js"></script>
-  <script src="js/genially.js"></script>
-
-  <!-- Script spécifique pour le carrousel de cette page -->
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    var slideIndex = 0;
-    var slides = document.getElementsByClassName("carousel-slide");
-    
-    // Fonction pour afficher une slide spécifique
-    function showSlide(index) {
-      // Cacher toutes les slides
-      for (var i = 0; i < slides.length; i++) {
-        slides[i].classList.remove("active");
+  
+  <!-- Script pour le carrousel -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var slideIndex = 0;
+      var slides = document.getElementsByClassName("carousel-slide");
+      
+      // Fonction pour afficher une slide spécifique
+      function showSlide(index) {
+        // Cacher toutes les slides
+        for (var i = 0; i < slides.length; i++) {
+          slides[i].classList.remove("active");
+        }
+        
+        // Afficher la slide demandée
+        slides[index].classList.add("active");
       }
       
-      // Afficher la slide demandée
-      slides[index].classList.add("active");
-    }
-    
-    // Bouton suivant
-    document.getElementById("next-btn").addEventListener("click", function() {
-      // Passer à la slide suivante
-      slideIndex++;
-      
-      // Revenir à la première slide si on dépasse la dernière
-      if (slideIndex >= slides.length) {
-        slideIndex = 0;
+      // Flèche droite (suivant)
+      var rightArrow = document.querySelector(".right-arrow");
+      if (rightArrow) {
+        rightArrow.addEventListener("click", function() {
+          // Passer à la slide suivante
+          slideIndex++;
+          
+          // Revenir à la première slide si on dépasse la dernière
+          if (slideIndex >= slides.length) {
+            slideIndex = 0;
+          }
+          
+          // Afficher la nouvelle slide
+          showSlide(slideIndex);
+        });
       }
       
-      // Afficher la nouvelle slide
-      showSlide(slideIndex);
-    });
-    
-    // Bouton précédent
-    document.getElementById("prev-btn").addEventListener("click", function() {
-      // Passer à la slide précédente
-      slideIndex--;
-      
-      // Aller à la dernière slide si on est à la première
-      if (slideIndex < 0) {
-        slideIndex = slides.length - 1;
+      // Flèche gauche (précédent)
+      var leftArrow = document.querySelector(".left-arrow");
+      if (leftArrow) {
+        leftArrow.addEventListener("click", function() {
+          // Passer à la slide précédente
+          slideIndex--;
+          
+          // Aller à la dernière slide si on est à la première
+          if (slideIndex < 0) {
+            slideIndex = slides.length - 1;
+          }
+          
+          // Afficher la nouvelle slide
+          showSlide(slideIndex);
+        });
       }
       
-      // Afficher la nouvelle slide
-      showSlide(slideIndex);
+      // Initialisation de la sidenav
+      var elems = document.querySelectorAll('.sidenav');
+      var instances = M.Sidenav.init(elems);
+      
+      // Gestionnaire d'événement pour le bouton menu
+      document.getElementById('menu-toggle').addEventListener('click', function(e) {
+        e.preventDefault();
+        var instance = M.Sidenav.getInstance(document.getElementById('mobile-nav'));
+        instance.open();
+      });
     });
-    
-    // Initialisation de la sidenav
-    var elems = document.querySelectorAll('.sidenav');
-    var instances = M.Sidenav.init(elems);
-    
-    // Gestionnaire d'événement pour le bouton menu
-    document.getElementById('menu-toggle').addEventListener('click', function(e) {
-      e.preventDefault();
-      var instance = M.Sidenav.getInstance(document.getElementById('mobile-nav'));
-      instance.open();
-    });
-  });
-</script>
+  </script>
 </body>
 </html>

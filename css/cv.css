@@ -10,7 +10,8 @@
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(52, 51, 79, 0.2);
   background: #3cb0b0d5;  /* Fond turquoise semi-transparent */
-  padding: 0px;          /* Espace intérieur */
+  padding: 1px;
+  padding-right: 50px;         /* Espace intérieur */
   color: white;           /* Couleur du texte en blanc */
 }
 
