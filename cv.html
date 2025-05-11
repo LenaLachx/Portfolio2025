@@ -1,142 +1,231 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Mon CV</title>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
   <link href="css/cv.css" rel="stylesheet">
+  <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.js"></script>
 </head>
-<body>
-  <!-- Menu hamburger (comme sur votre page d'accueil) -->
-  <a href="#" data-target="mobile-nav" class="sidenav-trigger" id="menu-toggle">
-    <i class="material-icons">menu</i>
-  </a>
-  
-  <!-- Menu latéral -->
-  <ul class="sidenav" id="mobile-nav">
-    <li><a href="index.html">Accueil</a></li>
-    <li><a href="cv.html">CV</a></li>
-    <li><a href="genially.html">Ressources Genially</a></li>
-    <li><a href="videos.html">Vidéos</a></li>
-    <li><a href="fiches.html">Fiches pédagogiques</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-  
-  <div class="container">
-    <!-- Section de présentation -->
-    <section id="presentation" class="section">
-      <div class="row">
-        <div class="col s12 center-align">
-          <h1>Mon CV</h1>
+<body class="cv-page">
+  <div class="cv-wrapper">
+    <!-- Menu hamburger -->
+    <a href="#" data-target="mobile-nav" class="sidenav-trigger" id="menu-toggle">
+      <i class="material-icons">menu</i>
+    </a>
+
+    <!-- Menu latéral -->
+    <ul class="sidenav" id="mobile-nav">
+      <li><a href="Accueil.html">Accueil</a></li>
+      <li><a href="cv.html">CV</a></li>
+      <li><a href="fiches.html">Fiches pédagogiques</a></li>
+      <li><a href="genially.html">Ressources Genially</a></li>
+      <li><a href="videos.html">Vidéos</a></li>
+      <li><a href="jeux.html">Serious Games</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+    <div class="container">
+      <!-- Section présentation -->
+      <section id="presentation" class="section">
+        <div class="row">
+          <div class="col s12 center-align">
+            <img src="images/illuCV.png" style="width: 30%; height: auto; display: block; margin: 0 auto;">
+            <h1 style="color: #f18192; font-size: 100px;margin-top: 10px; margin-bottom: 20px;">Bienvenue sur mon CV</h1>
+            <dotlottie-player src="https://lottie.host/81cfe70f-f5ed-4644-9be5-ca541db97452/Tnm1sGjmqa.lottie" background="transparent" speed="1" style="width: 200px; height: 300px; display: block; margin: auto; margin-bottom: 200px;" loop autoplay></dotlottie-player>
+          </div>
         </div>
-      </div>
-      
-      <div class="row">
-        <div class="col s12">
-          <div class="card">
+
+        <div class="row">
+          <div class="col s12 center-align">
             <div class="card-content">
-              <h2>À propos de moi</h2>
-              <p class="flow-text">
-                Votre texte de présentation ici. Décrivez votre parcours, vos compétences et vos objectifs professionnels.
-              </p>
+              <img src="images/PHOTO DE PROFIL LINKEDIN.png" width="300" alt="Votre photo" class="circle responsive-img">
+              <h2 style="color: #3cb0b0d5; text-shadow: 2px 2px 4px rgba(138, 135, 109, 0.422);">À propos de moi</h2>
+              <div class="card-presentation">
+                <p class="flow-text" style=" margin-bottom: -70px;">
+                  Étudiante de 29 ans passionnée par l'éducation et la technologie, je suis aujourd'hui en Master MEEF Concepteur de ressources numériques pédagogiques. Je suis heureuse de vous présenter mon parcours scolaire et professionnel qui m'a permis de développer des compétences variées dans la conception et la scénarisation de parcours de formation et de ressources pédagogiques. Je serai heureuse de les mettre à votre disposition pour vos différents projets.
+                </p>
+              </div>
+              <dotlottie-player src="https://lottie.host/81cfe70f-f5ed-4644-9be5-ca541db97452/Tnm1sGjmqa.lottie" background="transparent" speed="1" style="width: 200px; height: 300px; display: block; margin: auto; margin-bottom: 20px;" loop autoplay></dotlottie-player>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    
-    <!-- Section expériences professionnelles -->
-    <section id="experiences" class="section">
-      <div class="row">
-        <div class="col s12">
-          <h2 class="center-align">Expériences professionnelles</h2>
-          
-          <div class="timeline">
-            <!-- Expérience 1 -->
-            <div class="timeline-item">
-              <div class="timeline-date">
-                <span>2020 - 2023</span>
+      </section>
+
+      <!-- Expériences professionnelles -->
+      <section id="experiences" style="color: #3cb0b0d5;">
+        <div class="row">
+          <div class="col s12">
+            <h2 class="center-align">Expériences professionnelles</h2>
+            <div class="timeline">
+              <!-- Première expérience -->
+              <div class="timeline-item">
+                <div class="timeline-date"><span>2025</span></div>
+                <div class="timeline-point"></div>
+                <div class="timeline-content">
+                  <h3>Equipière polyvalente</h3>
+                  <h4>McDonald's - Jean Jaures | Toulouse</h4>
+                  <ul>
+                    <li style="font-size: 16px;">- Travail au comptoir, en salle et en cuisine</li>
+                    <li style="font-size: 16px;">- Accueil et conseil de la clientèle, tenue de caisse et service</li>
+                    <li style="font-size: 16px;">- Gestion de la production et préparation des produits</li>
+                    <li style="font-size: 16px;">- Gestion des stocks, manutention</li>
+                    <li style="font-size: 16px;">- Pariticipation à la formation des nouveaux employés</li>
+                  </ul>
+                </div>
               </div>
-              <div class="timeline-content">
-                <h3>Titre du poste</h3>
-                <h4>Nom de l'entreprise</h4>
-                <p>Description de vos responsabilités et réalisations dans ce poste.</p>
+
+              <!-- Deuxième expérience -->
+              <div class="timeline-item right">
+                <div class="timeline-date"><span>2024 - 2025</span></div>
+                <div class="timeline-point"></div>
+                <div class="timeline-content">
+                  <h3>Animatrice périscolaire</h3>
+                  <h4>Ecole Bayard-Matabiau | Toulouse</h4>
+                  <ul>
+                    <li style="font-size: 16px;">- Conception et conduite d'une action éducative</li>
+                    <li style="font-size: 16px;">- Mise en place de projets d'animations</li>
+                    <li style="font-size: 16px;">- Suivi et encadrement des enfants dans les temps de vie extra-scolaire</li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Troisième expérience -->
+              <div class="timeline-item">
+                <div class="timeline-date"><span>2022 - 2024</span></div>
+                <div class="timeline-point"></div>
+                <div class="timeline-content">
+                  <h3>Ingénieure du son</h3>
+                  <h4>Piste Rouge - Indépendante |</h4>
+                  <h4 style="margin-top: -10px;"> Paris, Poitiers, Toulouse</h4>
+                  <ul>
+                    <li style="font-size: 16px;">- Montage son</li>
+                    <li style="font-size: 16px;">- Nettoyage, édition et montage de dialogues et directs</li>
+                    <li style="font-size: 16px;">- Enregistrement, nettoyage, montage de bruitages</li>
+                    <li style="font-size: 16px;">- Direction artistique, création sonore et gestion de projets collaboratifs</li>
+                  </ul>
+                </div>
               </div>
             </div>
-            
-            <!-- Expérience 2 -->
-            <div class="timeline-item">
-              <div class="timeline-date">
-                <span>2018 - 2020</span>
-              </div>
-              <div class="timeline-content">
-                <h3>Titre du poste précédent</h3>
-                <h4>Nom de l'entreprise précédente</h4>
-                <p>Description de vos responsabilités et réalisations dans ce poste.</p>
-              </div>
-            </div>
-            
-            <!-- Ajoutez d'autres expériences en suivant le même modèle -->
           </div>
         </div>
-      </div>
-    </section>
-    
-    <!-- Section formation -->
-    <section id="formation" class="section">
-      <div class="row">
-        <div class="col s12">
-          <h2 class="center-align">Formation</h2>
-          
-          <div class="timeline">
-            <!-- Formation 1 -->
-            <div class="timeline-item">
-              <div class="timeline-date">
-                <span>2014 - 2018</span>
+      </section>
+
+      <!-- Formation -->
+      <section id="formation" class="section">
+        <div class="row">
+          <div class="col s12">
+            <h2 class="center-align" style="color: #3cb0b0d5;">Formations</h2>
+            <div class="timeline">
+              <!-- Première formation -->
+              <div class="timeline-item">
+                <div class="timeline-date"><span>2024-2025</span></div>
+                <div class="timeline-point"></div>
+                <div class="timeline-content">
+                  <h3>Master 1 MEEF Concepteur de Ressources Numériques pédagogiques</h3>
+                  <h4>INSPE Toulouse Occitanie</h4>
+                </div>
               </div>
-              <div class="timeline-content">
-                <h3>Diplôme obtenu</h3>
-                <h4>Nom de l'établissement</h4>
-                <p>Description de votre formation, spécialisation, projets importants, etc.</p>
+
+              <!-- Deuxième expérience -->
+              <div class="timeline-item right">
+                <div class="timeline-date"><span>2019 - 2022</span></div>
+                <div class="timeline-point"></div>
+                <div class="timeline-content">
+                  <h3>Sound Designer - RNCP Niveau 6</h3>
+                  <h4>ACFA Multimedia Montpellier</h4>
+                </div>
+              </div>
+
+              <!-- Troisième expérience -->
+              <div class="timeline-item">
+                <div class="timeline-date"><span>2015 - 2017</span></div>
+                <div class="timeline-point"></div>
+                <div class="timeline-content">
+                  <h3>DEUG d'Anthropologie sociale</h3>
+                  <h4>Université Toulouse Jean Jaures</h4>
+                </div>
               </div>
             </div>
-            
-            <!-- Formation 2 -->
-            <div class="timeline-item">
-              <div class="timeline-date">
-                <span>2012 - 2014</span>
-              </div>
-              <div class="timeline-content">
-                <h3>Diplôme précédent</h3>
-                <h4>Nom de l'établissement précédent</h4>
-                <p>Description de votre formation, spécialisation, projets importants, etc.</p>
-              </div>
-            </div>
-            
-            <!-- Ajoutez d'autres formations en suivant le même modèle -->
           </div>
         </div>
-      </div>
-    </section>
-  </div>
-  
-  <!-- Footer -->
+      </section>
+
+      <!-- Formation -->
+      <section id="formation" class="section">
+        <div class="row">
+          <div class="col s12">
+            <h2 class="center-align" style="color: #3cb0b0d5;">Stages</h2>
+            <div class="timeline">
+              <!-- Première formation -->
+              <div class="timeline-item">
+                <div class="timeline-date"><span>2025</span></div>
+                <div class="timeline-point"></div>
+                <div class="timeline-content">
+                  <h3>Stage d'ingénieur pédagogique</h3>
+                  <h4>Didask - Bagnolet</h4>
+                  <ul>
+              <li style="font-size: 16px;">- Conception d'activités multimédia interactives à destination d'élèves en difficulté (fin de primaire, collège).</li>
+              <li style="font-size: 16px;">- Analyse de contenus pédagogiques pour identifier les modalités pédagogiques pertinentes.</li>
+              <li style="font-size: 16px;">- Conception de parcours pédagogiques sur le LMS Didask.</li>
+              <li style="font-size: 16px;">- Veille et comparaison d'outils auteurs</li>
+              <li style="font-size: 16px;">- Collaboration avec les parties prenante du projet (enseignants, ingénieurs pédagogiques, autres concepteurs). </li>
+              <li style="font-size: 16px;">- Documentation des processus de création pédagogique.</li>
+              <li style="font-size: 16px;">- Intégration des retours utilisateurs et des encadrants dans une démarche d'amélioration continue.</li>
+            </ul>
+                </div>
+              </div>
+
+              <!-- Deuxième stage -->
+              <div class="timeline-item right">
+                <div class="timeline-date"><span>2021</span></div>
+                <div class="timeline-point"></div>
+                <div class="timeline-content">
+                  <h3>Assistante montage son et directs</h3>
+            <h4>Piste Rouge | Bruxelles - Angoulême</h4>
+            <ul>
+              <li style="font-size: 16px;">- Assistanat montage de directs</li>
+              <li style="font-size: 16px;">- Assistanat montage son</li>
+              <li style="font-size: 16px;">- Recalage de bruitages</li>
+              <li style="font-size: 16px;">- Nettoyage d'auto-confos sur différents projets</li>
+            </ul>
+                </div>
+              </div>
+              <div class="timeline-item">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+</div> <!-- Fermeture de .container -->
+  </div> <!-- Fermeture de .cv-wrapper -->
+
+  <!-- Footer - PLACÉ EN DEHORS DE CV-WRAPPER -->
   <footer class="page-footer">
     <div class="container">
       <div class="row">
         <div class="col s12">
-          <h5 class="white-text">Votre Nom</h5>
+          <h5 class="white-text">Léna Lachaux</h5>
           <p class="grey-text text-lighten-4">© 2025 Tous droits réservés</p>
         </div>
       </div>
     </div>
   </footer>
-  
+
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>
+    // Initialisation de la sidenav
+    document.addEventListener('DOMContentLoaded', function() {
+      const elems = document.querySelectorAll('.sidenav');
+      M.Sidenav.init(elems);
+    });
+  </script>
   <script src="js/common.js"></script>
 </body>
 </html>

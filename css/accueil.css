@@ -1,0 +1,236 @@
+/* ========== STYLES DES SECTIONS PARALLAX ========== */
+section {
+  min-height: 100vh;           /* Chaque section fait 100% de la hauteur de la fenêtre (viewport height) */
+  display: flex;      /* Utilise le modèle flexbox pour centrer facilement le contenu */
+  flex-direction: column;
+  justify-content: center;  /* Centre horizontalement le contenu */
+  align-items: center;      /* Centre verticalement le contenu */
+  position: relative;       /* Définit le positionnement comme relatif pour les éléments enfants */
+  color: white;             /* Couleur du texte en blanc */
+  transition: opacity 1s ease-out;  /* Animation de transition pour l'opacité */
+  padding: 80px 20px;        /* ajoute un espace pour éviter que l'image colle au haut */
+  box-sizing: border-box;  /* Inclut le padding dans la largeur totale de l'élément */
+}
+
+#section0 {
+  background-color: #ffdf90;  /* Couleur de fond jaune */
+}
+/* Styles spécifiques pour chaque section avec dégradés de couleurs différents */
+#section1 {
+  background: linear-gradient(to bottom, #ffdf90, #f18192);  /* Dégradé rose vers violet */
+}
+
+#section2 {
+  background: linear-gradient(to bottom, #f18192, #529b9b);  /* Dégradé violet vers bleu */
+}
+
+#section3 {
+  background: linear-gradient(to bottom, #529b9b, #7ddede);  /* Dégradé bleu vers cyan */
+}
+
+/* ========== EFFET DE FONDU DU TEXTE ========== */
+.fade-text {
+  opacity: 0;         /* Le texte est invisible par défaut */
+  transform: translateY(20px);  /* Le texte est décalé de 20px vers le bas */
+  transition: opacity 1s ease, transform 1s ease;  /* Animation de transition pour l'opacité et la position */
+  width: 100%;        /* Prend toute la largeur disponible */
+}
+
+.fade-text.visible {
+  opacity: 1;         /* Quand la classe 'visible' est ajoutée, le texte devient visible */
+  transform: translateY(0);  /* Et revient à sa position normale */
+}
+
+/* ========== COMPOSANTS UI ========== */
+/* Cartes pour présenter le contenu */
+.carte-competences {
+  border-radius: 8px;     /* Coins arrondis */
+  overflow: hidden;       /* Cache tout débordement */
+  box-shadow: 0 4px 10px rgba(52, 51, 79, 0.2);  /* Ombre légère */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;  /* Animation au survol */
+  background-color: rgba(255, 255, 255, 0.1);  /* Fond blanc légèrement transparent */
+  backdrop-filter: blur(5px);  /* Effet de flou derrière la carte */
+  height: 100%;           /* Prend toute la hauteur disponible */
+  text-align: center;     /* Centre le texte */
+}
+
+.carte-competences .card-content {
+  padding: 20px;          /* Espace intérieur */
+  text-align: center;     /* Centre le texte */
+  font-size: 20px;
+}
+
+.carte-competences .card-title {
+  font-size: 1.5rem;      /* Taille de police grande */
+  color: #ffdf90;  
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;     /* Centre le titre */
+  position: relative;     /* Pour positionner l'icône correctement */
+  padding-right: 24px;    /* Espace pour l'icône à droite */
+  display: inline-block;  /* Pour que le titre reste centré */
+  margin-bottom: 15px;    /* Espace sous le titre */
+}
+
+.carte-competences .card-title .material-icons.right {
+  position: absolute;     /* Position absolue par rapport au titre */
+  right: -5px;            /* Alignement à droite */
+  top: 50%;               /* Centré verticalement */
+  transform: translateY(-50%); /* Ajustement vertical précis */
+  color: #ffdf90;
+}
+
+.carte-competences .material-icons.large {
+  margin-bottom: 15px;    /* Espace sous l'icône */
+  color: #ffdf90;         /* Couleur de l'icône */
+  font-size: 5rem;        /* Taille de l'icône */
+  display: block;         /* Pour centrer l'icône */
+  margin-left: auto;      /* Centre horizontalement */
+  margin-right: auto;     /* Centre horizontalement */
+}
+
+.carte-competences p {
+  text-align: center;     /* Centre le paragraphe */
+  margin: 0 auto;         /* Centre le bloc */
+}
+
+/* Style pour la carte reveal */
+.carte-competences .card-reveal {
+  background-color: #326161;
+  color: white;
+  padding: 20px;
+  overflow-y: scroll;       /* Ajoute une barre de défilement si nécessaire */
+}
+
+/* Styles pour la barre de défilement sur WebKit (Chrome, Safari, Edge) */
+.carte-competences .card-reveal::-webkit-scrollbar {
+  width: 8px;             /* Largeur de la barre */
+}
+
+.carte-competences .card-reveal::-webkit-scrollbar-track {
+  background: rgba(40, 44, 52, 0.5);  /* Couleur de fond de la piste */
+  border-radius: 4px;     /* Coins arrondis */
+}
+
+.carte-competences .card-reveal::-webkit-scrollbar-thumb {
+  background-color: #ffdf90;  /* Couleur de la barre (jaune comme vos accents) */
+  border-radius: 4px;     /* Coins arrondis */
+}
+
+.carte-competences .card-reveal::-webkit-scrollbar-thumb:hover {
+  background-color: #ffe6a3;  /* Couleur au survol (jaune plus clair) */
+}
+
+.carte-competences .card-reveal .card-title {
+  text-align: left;       /* Aligne le titre à gauche dans la carte reveal */
+  display: block;         /* Occupe toute la largeur */
+  padding-right: 10px;    /* Espace pour l'icône de fermeture */
+}
+
+.carte-competences .card-reveal ul {
+  text-align: left;
+  padding-left: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.carte-competences .card-reveal li {
+  margin-bottom: 10px;
+  list-style-type: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Animation de l'icône plus au survol */
+.carte-competences:hover .card-title .material-icons.right {
+  transform: translateY(-50%) rotate(90deg);
+}
+
+/* Style pour les cartes */
+.link-card {
+  border-radius: 8px;     /* Coins arrondis */
+  overflow: hidden;       /* Cache tout débordement */
+  box-shadow: 0 4px 10px rgba(52, 51, 79, 0.2);  /* Ombre légère */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;  /* Animation au survol */
+  background-color: rgba(255, 255, 255, 0.1);  /* Fond blanc légèrement transparent */
+  backdrop-filter: blur(5px);  /* Effet de flou derrière la carte */
+  height: 100%;           /* Prend toute la hauteur disponible */
+}
+
+.link-card:hover {
+  transform: translateY(-5px);  /* Léger mouvement vers le haut au survol */
+  box-shadow: 0 6px 15px #ffffffb4;  /* Ombre plus prononcée */
+}
+
+.link-card .material-icons {
+  margin-bottom: 15px;    /* Espace sous l'icône */
+  color: #ffdf90;         /* Couleur de l'icône (violet) */
+}
+
+/* Style pour les liens contenant les cartes */
+.card-link {
+  text-decoration: none;
+  color: white;
+  display: block;
+  height: 100%;
+}
+
+/* Assurez-vous que les éléments à l'intérieur des cartes restent blancs */
+.card-link h4,
+.card-link p {
+  color: white;
+}
+
+/* Pour maintenir la couleur blanche même au survol */
+.card-link:hover,
+.card-link:hover h4,
+.card-link:hover p {
+  color: white;
+  text-decoration: none;
+}
+
+/* Dernière carte ajustée pour correspondre au style global */
+.cv-card {
+  border-radius: 8px;     /* Coins arrondis similaires */
+  overflow: hidden;       /* Cache les débordements */
+  box-shadow: 0 4px 10px rgba(52, 51, 79, 0.2);  /* Ombre douce */
+  background-color: rgba(255, 255, 255, 0.1);  /* Fond légèrement transparent */
+  backdrop-filter: blur(5px);  /* Effet de flou */
+  padding: 20px;          /* Espace intérieur */
+  text-align: center;     /* Texte centré */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;  /* Animation sur survol */
+}
+
+/* Effet sur la carte au survol */
+.cv-card:hover {
+  transform: translateY(-5px);  /* Mouvement léger vers le haut */
+  box-shadow: 0 6px 15px #ffe09093;  /* Ombre accentuée */
+}
+
+.cv-card .card-title {
+  font-size: 1.5rem;      /* Taille de police ajustée */
+  color: #ffdf90;         /* Couleur de texte similaire à la palette */
+}
+
+.cv-card .material-icons {
+  margin-bottom: 15px;    /* Espace sous l'icône */
+  color: #ffdf90;         /* Couleur de l'icône (violet) */
+}
+
+/* Si la carte contient un lien, appliquer les mêmes effets */
+.cv-card a {
+  color: #ffdf90;         /* Liens en couleur violette */
+  text-decoration: none;  /* Pas de soulignement */
+}
+
+.cv-card a:hover {
+  text-decoration: underline;  /* Souligné au survol */
+}
+
+/* Responsive pour la page d'accueil */
+@media only screen and (max-width: 768px) {
+  /* Ajustements spécifiques pour la page d'accueil sur tablettes */
+}
+
+@media only screen and (max-width: 600px) {
+  section {
+    padding: 0 15px;      /* Ajoute de l'espace sur les côtés */
+  }
+}

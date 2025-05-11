@@ -1,0 +1,192 @@
+/* Styles pour la page Jeux */
+.jeux-page {
+  background-color: #fae6b437;
+  color: white;
+}
+
+/* Titre principal */
+.jeux-title {
+  color: #f18192;
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  font-size: 60px;
+}
+
+/* Titres de section */
+.section-title {
+  color: #3cb0b0d5;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Carte de présentation */
+.presentation-card {
+  background-color: #3cb0b0d5;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 50px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  color: white;
+  text-align: center;
+}
+
+/* Section du jeu */
+.game-section {
+  margin-bottom: 60px;
+}
+
+/* Description du jeu */
+.game-description {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+
+/* Bouton pour lancer le jeu */
+.game-btn {
+  display: inline-block;
+  background-color: #e06d7e; /* Couleur foncée par défaut */
+  color: white;
+  padding: 12px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  margin-top: 20px;
+  font-size: 18px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.game-btn:hover {
+  background-color: #f18192; /* Couleur plus claire au survol */
+}
+
+.game-btn:focus {
+  background-color: #e06d7e;
+  outline: none;
+}
+
+.game-btn:focus:hover {
+  background-color: #f18192;
+}
+
+/* Conteneur pour la capture d'écran et le bouton simplifié */
+.game-screenshot-container {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto 40px auto;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Style de l'image de capture d'écran */
+.game-screenshot {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Bouton fixe en bas au centre */
+.fixed-btn {
+  position: absolute;
+  bottom: 25px; /* Position légèrement plus haute par défaut */
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+/* Effet de survol pour le bouton fixe */
+.fixed-btn:hover {
+  transform: translateX(-50%) translateY(3px); /* Déplacement vers le bas au survol */
+}
+
+/* Instructions */
+.game-instructions {
+  margin-top: 40px;
+  color: #333;
+}
+
+.game-instructions h3 {
+  color: #3cb0b0d5;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.game-instructions ul {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  padding: 20px 40px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.game-instructions li {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+/* Footer */
+.page-footer {
+  background-color: #5ccfd4;
+  padding: 20px 0;
+  margin-top: 0;
+}
+
+/* Responsive */
+@media only screen and (max-width: 600px) {
+  .jeux-title {
+    font-size: 40px;
+    margin-top: 60px;
+    margin-bottom: 30px;
+  }
+  
+  .game-container {
+    height: 400px;
+  }
+  
+  .game-btn {
+    font-size: 16px;
+    padding: 10px 25px;
+  }
+  
+  .game-instructions ul {
+    padding: 15px 25px;
+  }
+  
+  .game-instructions li {
+    font-size: 14px;
+  }
+}
+
+/* Styles pour les écrans moyens */
+@media only screen and (max-width: 768px) and (min-width: 601px) {
+  .jeux-title {
+    font-size: 50px;
+  }
+  
+  .game-screenshot-container {
+    max-width: 90%;
+  }
+}
+
+/* Animation pour le bouton */
+@keyframes pulse {
+  0% {
+    transform: translateX(-50%) scale(1);
+  }
+  50% {
+    transform: translateX(-50%) scale(1.05);
+  }
+  100% {
+    transform: translateX(-50%) scale(1);
+  }
+}
+
+/* Effet de pulsation sur le bouton au chargement de la page */
+.fixed-btn.pulse {
+  animation: pulse 2s infinite;
+}

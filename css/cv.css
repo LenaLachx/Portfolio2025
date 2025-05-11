@@ -1,0 +1,235 @@
+/* ========== STYLES POUR LA PAGE CV ========== */
+/* Présentation générale */
+.cv-page {
+  background: #fae6b437;  /* Fond légèrement teinté */
+  padding: 0px;          /* Espace intérieur */
+  color: white;           /* Couleur du texte en blanc */
+}
+
+.card-presentation {
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(52, 51, 79, 0.2);
+  background: #3cb0b0d5;  /* Fond turquoise semi-transparent */
+  padding: 0px;          /* Espace intérieur */
+  color: white;           /* Couleur du texte en blanc */
+}
+
+.cv-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.cv-wrapper .container {
+  flex: 1;
+}
+
+.cv-page .page-footer {
+  background-color: #5ccfd4;
+  margin: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/* Espacement des sections */
+.section {
+  margin: 50px 0;
+}
+
+/* Timeline verticale */
+.timeline {
+  position: relative;     /* Pour positionner la ligne verticale */
+  padding: 20px 0;        /* Espace au-dessus et en-dessous */
+  margin-top: 40px;
+}
+
+/* Ligne verticale centrée */
+.timeline:before {
+  content: '';
+  position: absolute;
+  left: 50%;              /* Centre la ligne */
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  margin-left: -2px;      /* Ajustement pour centrer parfaitement */
+  background: linear-gradient(to bottom, #529b9b, #7ddede);  /* Dégradé turquoise */
+}
+
+/* Modification spécifique pour la timeline des stages */
+.stage-timeline:before {
+  height: calc(100% + 50px); /* Étend la ligne 50px plus bas */
+  bottom: -50px; /* Force la ligne à descendre plus bas */
+}
+
+/* Style pour chaque élément de la timeline */
+.timeline-item {
+  position: relative;
+  margin-bottom: 50px;
+  clear: both;
+  width: 100%;
+  display: flex;          /* Utiliser flexbox pour l'alignement */
+  align-items: center;    /* Centrer verticalement les éléments */
+}
+
+/* Style pour les éléments à droite */
+.timeline-item.right {
+  flex-direction: row-reverse; /* Inverser l'ordre pour les éléments à droite */
+}
+
+/* Style pour les dates */
+.timeline-date {
+  width: calc(50% - 20px); /* 50% moins l'espace pour la ligne centrale */
+  text-align: right;
+  padding-right: 40px;    /* Espace entre la date et la ligne centrale */
+  color: #f18192;         /* Couleur rose */
+  font-weight: bold;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  box-sizing: border-box;
+  font-size: 30px;
+}
+
+/* Style pour le contenu de chaque élément */
+.timeline-content {
+  position: relative;
+  width: calc(50% - 20px); /* 50% moins l'espace pour la ligne centrale */
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  color: #000;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: 40px;      /* Espace entre la ligne centrale et la carte */
+  box-sizing: border-box;
+}
+
+/* Point sur la timeline */
+.timeline-point {
+  position: absolute;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: white;
+  border: 4px solid #f18192;  /* Bordure rose */
+  transform: translateX(-50%); /* Centrer horizontalement */
+  z-index: 2;             /* Au-dessus de la ligne */
+}
+
+/* Élément à droite de la timeline */
+.timeline-item.right .timeline-date {
+  text-align: left;
+  padding-right: 0;
+  padding-left: 40px;     /* Espace entre la date et la ligne centrale */
+}
+
+.timeline-item.right .timeline-content {
+  margin-left: 0;
+  margin-right: 40px;     /* Espace entre la ligne centrale et la carte */
+}
+
+/* Titres dans la timeline */
+.timeline-content h3 {
+  margin-top: 0;
+  color: #26a69a;
+  font-size: 1.5rem;
+}
+
+.timeline-content h4 {
+  font-size: 1.2rem;
+  color: #f18192;  /* Couleur rose pour les sous-titres */
+}
+
+.timeline-section {
+  margin-bottom: 40px;    /* Espace entre les sections */
+}
+
+/* Barres de compétences */
+.skills-section {
+  margin-top: 60px;       /* Espace au-dessus */
+}
+
+.progress {
+  height: 10px;           /* Hauteur de la barre */
+  border-radius: 5px;     /* Coins arrondis */
+  background-color: #eee;  /* Fond gris clair */
+}
+
+.progress .determinate {
+  background: linear-gradient(to right, #7873f5, #3c8ce7);  /* Dégradé violet vers bleu */
+  border-radius: 5px;     /* Coins arrondis */
+}
+
+/* Correction pour la timeline de la section stages */
+#stage .timeline:before {
+  bottom: -50px; /* Étend la ligne verticale plus bas */
+}
+
+/* Correction pour le footer */
+.page-footer {
+  width: 100%;
+  left: 0;
+  right: 0;
+  position: relative;
+  margin-top: 50px;
+}
+
+/* Media queries pour la timeline responsive */
+@media only screen and (max-width: 768px) {
+  /* Ajustement de la timeline pour les écrans plus petits */
+  .timeline:before {
+    left: 30px;           /* Déplace la ligne à gauche */
+    margin-left: 0;
+  }
+  
+  .timeline-item, .timeline-item.right {
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+  }
+  
+  .timeline-point {
+    position: absolute;
+    left: 30px;
+    top: 10px;            /* Ajusté pour aligner avec la date */
+    transform: translateX(-50%); /* Centrer sur la ligne */
+    margin-top: 0;
+  }
+  
+  .timeline-date, .timeline-item.right .timeline-date {
+    width: 100%;
+    text-align: left;
+    padding: 0;
+    margin-left: 50px;    /* Ajusté pour s'aligner avec le point */
+    margin-bottom: 15px;
+    font-size: 24px;      /* Taille de police réduite pour mobile */
+  }
+  
+  .timeline-content, .timeline-item.right .timeline-content {
+    width: calc(100% - 50px);
+    margin-left: 50px;    /* Aligné avec la date */
+    margin-right: 0;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .timeline:before {
+    left: 20px;           /* Ajuste encore la position de la ligne */
+  }
+  
+  .timeline-point {
+    left: 20px;           /* Aligné avec la ligne */
+    width: 16px;          /* Point plus petit */
+    height: 16px;         /* Point plus petit */
+  }
+  
+  .timeline-date, .timeline-item.right .timeline-date {
+    margin-left: 35px;    /* Ajusté pour s'aligner avec le point */
+    font-size: 20px;      /* Encore plus petit sur très petits écrans */
+  }
+  
+  .timeline-content, .timeline-item.right .timeline-content {
+    width: calc(100% - 35px);
+    margin-left: 35px;    /* Aligné avec la date */
+  }
+}

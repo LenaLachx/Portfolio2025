@@ -2,80 +2,164 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Page 1</title>
-
-  <!-- Materialize CSS -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet" />
-  <!-- Icônes Materialize -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mes ressources Genially</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <!-- Ton CSS -->
-  <link href="css/style.css" rel="stylesheet" />
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/genially.css" rel="stylesheet">
+  
 </head>
-<body>
+<body class="genially-page">
+  <!-- Menu hamburger -->
+  <a href="#" data-target="mobile-nav" class="sidenav-trigger" id="menu-toggle">
+    <i class="material-icons">menu</i>
+  </a>
 
-  <!-- Barre de navigation -->
-  <nav>
-    <div class="nav-wrapper red lighten-3">
-      <!-- Menu burger à gauche -->
-      <a href="#" data-target="mobile-nav" class="sidenav-trigger left">
-        <i class="material-icons">menu</i>
-      </a>
-
-      <!-- Logo centré (mon site) non cliquable -->
-      <span class="brand-logo center">Mon Site</span>
-
-      <!-- Menu horizontal desktop à droite -->
-      <ul class="right hide-on-med-and-down" id="menu-desktop">
-        <li><a href="index.html">Accueil</a></li> <!-- Ce lien est visible sur toutes les pages -->
-        <li><a href="page1.html">Page 1</a></li>
-        <li><a href="page2.html">Page 2</a></li>
-        <li><a href="page3.html">Page 3</a></li>
-        <li><a href="page4.html">Page 4</a></li>
-        <li><a href="page5.html">Page 5</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <!-- Menu latéral mobile -->
+  <!-- Menu latéral -->
   <ul class="sidenav" id="mobile-nav">
-    <li><a href="index.html">Accueil</a></li>
-    <li><a href="page1.html">Page 1</a></li>
-    <li><a href="page2.html">Page 2</a></li>
-    <li><a href="page3.html">Page 3</a></li>
-    <li><a href="page4.html">Page 4</a></li>
-    <li><a href="page5.html">Page 5</a></li>
+    <li><a href="Accueil.html">Accueil</a></li>
+    <li><a href="cv.html">CV</a></li>
+    <li><a href="fiches.html">Fiches pédagogiques</a></li>
+    <li><a href="genially.html">Ressources Genially</a></li>
+    <li><a href="videos.html">Vidéos</a></li>
+    <li><a href="jeux.html">Serious Games</a></li>
+    <li><a href="contact.html">Contact</a></li>
   </ul>
 
-  <!-- Contenu principal -->
   <div class="container">
-    <h1 class="center-align">Bienvenue sur la Page 1</h1>
-    <p class="flow-text">Voici le contenu de la première page.</p>
+    <!-- Titre de la page -->
+    <h1 class="genially-title">Mes ressources Genially</h1>
+    
+    <!-- Présentation -->
+    <div class="presentation-card">
+      <p class="flow-text">
+        Genially est un outil de création de contenu interactif qui permet de concevoir des présentations, infographies, jeux, et bien plus encore. Découvrez ci-dessous quelques-unes de mes créations.
+      </p>
+    </div>
+    
+    <!-- Carrousel simple -->
+    <h2 class="section-title">Mes créations</h2>
+    
+    <div class="carousel-container">
+      <!-- Slide 1 -->
+      <div class="carousel-slide active">
+        <div class="genially-container">
+          <iframe title="V2.Serious Game - Range les jouets dans le supermarché" frameborder="0" src="https://view.genially.com/6820b5c7d11e376ebb75af5c" allowscriptaccess="always" allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe>
+        </div>
+        <h3 class="slide-title">Serious Game - Range les jouets</h3>
+        <p class="slide-description">Un jeu éducatif pour apprendre à ranger et catégoriser les jouets.</p>
+      </div>
+      
+      <!-- Slide 2 (à remplacer par votre contenu) -->
+      <div class="carousel-slide">
+        <div class="genially-container">
+          <iframe title="Exemple 2" frameborder="0" src="https://view.genially.com/6820b5d04b2a805b68640a48" type="text/html" type="text/html" allowscriptaccess="always" allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe>
+        </div>
+        <h3 class="slide-title">Mise en situation - Communication avec les familles</h3>
+        <p class="slide-description">Description de votre deuxième création.</p>
+      </div>
+
+      <!-- Slide 3 (à remplacer par votre contenu) -->
+      <div class="carousel-slide">
+        <div class="genially-container">
+          <iframe title="Exemple 3" frameborder="0" src="https://view.genially.com/6820b5d88bae7b132abecbdd" type="text/html" type="text/html" allowscriptaccess="always" allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe>
+        </div>
+        <h3 class="slide-title">Mise en situation - Aménagement de l'espace</h3>
+        <p class="slide-description">Description de votre deuxième création.</p>
+      </div>
+      
+      <!-- Slide 3 (à remplacer par votre contenu) -->
+      <div class="carousel-slide">
+        <div class="genially-container">
+          <iframe title="Exemple 4" frameborder="0" src="https://view.genially.com/6795f03875e563c01372e19f" allowscriptaccess="always" allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe>
+        </div>
+        <h3 class="slide-title">Titre de votre troisième Genially</h3>
+        <p class="slide-description">Description de votre troisième création.</p>
+      </div>
+
+      
+      <!-- Boutons de navigation -->
+      <div class="carousel-buttons">
+        <button id="prev-btn" class="carousel-btn">Précédent</button>
+        <button id="next-btn" class="carousel-btn">Suivant</button>
+      </div>
+    </div>
   </div>
+  
+  <!-- Footer -->
+  <footer class="page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col s12">
+          <h5 class="white-text">Votre Nom</h5>
+          <p class="grey-text text-lighten-4">© 2025 Tous droits réservés</p>
+        </div>
+      </div>
+    </div>
+  </footer>
 
-  <!-- jQuery -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <!-- Materialize JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <!-- Script JS -->
-  <script src="js/script.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/genially.js"></script>
 
-  <!-- JavaScript pour mettre en surbrillance le lien actif -->
-  <script>
-    $(document).ready(function () {
-      // Récupérer l'URL actuelle de la page
-      var currentPage = window.location.pathname;
-
-      // Ajouter la classe "active" au lien correspondant
-      $('#menu-desktop a').each(function () {
-        if (this.href.indexOf(currentPage) !== -1) {
-          $(this).parent().addClass('active');
-        }
-      });
-
-      // Initialiser le menu mobile
-      $('.sidenav').sidenav();
+  <!-- Script spécifique pour le carrousel de cette page -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var slideIndex = 0;
+    var slides = document.getElementsByClassName("carousel-slide");
+    
+    // Fonction pour afficher une slide spécifique
+    function showSlide(index) {
+      // Cacher toutes les slides
+      for (var i = 0; i < slides.length; i++) {
+        slides[i].classList.remove("active");
+      }
+      
+      // Afficher la slide demandée
+      slides[index].classList.add("active");
+    }
+    
+    // Bouton suivant
+    document.getElementById("next-btn").addEventListener("click", function() {
+      // Passer à la slide suivante
+      slideIndex++;
+      
+      // Revenir à la première slide si on dépasse la dernière
+      if (slideIndex >= slides.length) {
+        slideIndex = 0;
+      }
+      
+      // Afficher la nouvelle slide
+      showSlide(slideIndex);
     });
-  </script>
+    
+    // Bouton précédent
+    document.getElementById("prev-btn").addEventListener("click", function() {
+      // Passer à la slide précédente
+      slideIndex--;
+      
+      // Aller à la dernière slide si on est à la première
+      if (slideIndex < 0) {
+        slideIndex = slides.length - 1;
+      }
+      
+      // Afficher la nouvelle slide
+      showSlide(slideIndex);
+    });
+    
+    // Initialisation de la sidenav
+    var elems = document.querySelectorAll('.sidenav');
+    var instances = M.Sidenav.init(elems);
+    
+    // Gestionnaire d'événement pour le bouton menu
+    document.getElementById('menu-toggle').addEventListener('click', function(e) {
+      e.preventDefault();
+      var instance = M.Sidenav.getInstance(document.getElementById('mobile-nav'));
+      instance.open();
+    });
+  });
+</script>
 </body>
 </html>

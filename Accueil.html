@@ -27,6 +27,7 @@
   
   <!-- Lien vers notre feuille de style personnalisée -->
   <link href="css/style.css" rel="stylesheet">
+  <link href="css/accueil.css" rel="stylesheet">
 
   <!--Police de GoogleFonts-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -44,11 +45,12 @@
 
   <!-- Menu latéral mobile (sidenav) avec des liens de navigation -->
   <ul class="sidenav" id="mobile-nav">
-    <li><a href="index.html">Accueil</a></li>
+    <li><a href="Accueil.html">Accueil</a></li>
     <li><a href="cv.html">CV</a></li>
+    <li><a href="fiches.html">Fiches pédagogiques</a></li>
     <li><a href="genially.html">Ressources Genially</a></li>
     <li><a href="videos.html">Vidéos</a></li>
-    <li><a href="fiches.html">Fiches pédagogiques</a></li>
+    <li><a href="jeux.html">Serious Games</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
 
@@ -83,110 +85,155 @@
   </section>
   
   
- <section id="section2">
+<section id="section2">
   <div class="fade-text">
     <div class="container">
       <div class="row">
         <div class="col s12 center-align">
-          <h2 style="margin-bottom: 100px;">Mes compétences</h2>
+          <h2 style="margin-bottom: 30px; color: #ffdf90;">Mes compétences</h2>
           <div class="row">
-            <div class="col s12 m4">
-              <div class="carte-competences">
+            <!-- Carte Pédagogie -->
+            <div class="col s12 m12 l4">
+              <div class="card carte-competences">
                 <div class="card-content white-text">
                   <i class="material-icons large">school</i>
-                  <div class="card-title">Pédagogie</div>
+                  <span class="card-title activator" style="font-size: 35px; padding-left: 20px;">Pédagogie<i class="material-icons right">add</i></span>
                   <p>Création de ressources adaptées aux besoins des apprenants.</p>
                 </div>
-              </div>
-            </div>
-            <div class="col s12 m4">
-              <div class="carte-competences">
-                <div class="card-content white-text">
-                  <i class="material-icons large">movie</i>
-                  <div class="card-title">Multimédia</div>
-                  <p>Conception de contenus interactifs et vidéos pédagogiques.</p>
+                <div class="card-reveal">
+                  <span class="card-title" style="color: #ffdf90;">Compétences pédagogiques<i class="material-icons right">close</i></span>
+                  <ul>
+                    <li>• Conception de scénarios pédagogiques</li>
+                    <li>• Création de fiches pédagogiques</li>
+                    <li>• Adaptation des contenus aux différents niveaux</li>
+                    <li>• Évaluation formative et sommative</li>
+                    <li>• Pédagogie différenciée</li>
+                    <li>• Gestion de classe</li>
+                  </ul>
                 </div>
               </div>
             </div>
-            <div class="col s12 m4">
-              <div class="carte-competences">
-                <div class="card-content">
+            
+            <!-- Carte Multimédia -->
+            <div class="col s12 m12 l4">
+              <div class="card carte-competences">
+                <div class="card-content white-text">
+                  <i class="material-icons large">movie</i>
+                  <span class="card-title activator" style="font-size: 35px; padding-left: 20px;">Multimédia<i class="material-icons right">add</i></span>
+                  <p>Conception de contenus interactifs et vidéos pédagogiques.</p>
+                </div>
+                <div class="card-reveal">
+                  <span class="card-title" style="color: #ffdf90;">Outils multimédia<i class="material-icons right">close</i></span>
+                  <ul>
+                    <li>• Genially - Création de contenus interactifs</li>
+                    <li>• Adobe Premiere Pro - Montage vidéo</li>
+                    <li>• Canva - Design graphique</li>
+                    <li>• Audacity - Édition audio</li>
+                    <li>• OBS Studio - Capture d'écran et streaming</li>
+                    <li>• H5P - Contenus interactifs</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Carte Numérique -->
+            <div class="col s12 m12 l4">
+              <div class="card carte-competences">
+                <div class="card-content white-text">
                   <i class="material-icons large">devices</i>
-                  <div class="card-title">Numérique</div>
+                  <span class="card-title activator" style="font-size: 35px; padding-left: 20px;">Numérique<i class="material-icons right">add</i></span>
                   <p>Maîtrise des outils numériques pour l'enseignement</p>
+                </div>
+                <div class="card-reveal">
+                  <span class="card-title" style="color: #ffdf90;">Outils numériques<i class="material-icons right">close</i></span>
+                  <ul>
+                    <li>• Moodle - Plateforme LMS</li>
+                    <li>• Microsoft Office 365</li>
+                    <li>• Google Workspace for Education</li>
+                    <li>• Kahoot - Quiz interactifs</li>
+                    <li>• Padlet - Murs collaboratifs</li>
+                    <li>• Wooclap - Interactions en direct</li>
+                    <li>• Notion - Organisation et documentation</li>
+                  </ul>
                 </div>
               </div>
             </div>
           </div>
           
-          <!-- Intégration de la cv-card ici -->
+          <!-- Reste de votre code (CV card) -->
           <div class="row">
-            <div class="col s12 m7" style="margin: 0 auto; float: none; margin-top: 50px;">
-              <div class="cv-card">
+            <div class="col s12 m7" style="margin: 0 auto; float: none; margin-top: 10px;">
+              <div class="cv-card" onclick="window.location.href='cv.html'" style="cursor: pointer;">
                 <div class="card-image center-align">
-                  <img src="images/CV CROP.png" style="width: 80%; height: auto; display: block; margin: 0 auto; margin-top: 20px;">
-                  <h2 class="card-title">Mon CV</h2>
+                  <img src="images/illuCV.png" style="width: 40%; height: auto; display: block; margin: 0 auto;">
+                  <h2 class="card-title" style="margin-top: 5px;">Mon CV</h2>
                 </div>
-                <div class="card-content">
+                <div class="card-content" style="margin-top: -10px;">
                   <p>Vous souhaitez en savoir plus ? Cliquez sur le lien pour accéder à mon CV</p>
                 </div>
                 <div class="card-action">
-                  <a href="#">Voir mon CV complet</a>
+                  <a href="cv.html">Voir mon CV complet</a>
                 </div>
               </div>
             </div>
           </div>
-          <!-- Fin de l'intégration -->
-          
         </div>
       </div>
     </div>
   </div>
 </section>
 
-
-  <section id="section3">
+<section id="section3">
     <div class="fade-text">
       <div class="container">
         <div class="row">
           <div class="col s12 center-align">
-            <h2 style="margin-bottom: 100px;">Mes ressources pédagogiques</h2>
+            <h2 style="margin-bottom: 10px;">Mes ressources pédagogiques</h2>
+            <p class="flow-text">Cliquez sur les icônes pour accéder aux différentes ressources pédagogiques.</p>
             <div class="row">
               <div class="col s12 m3">
-                <div class="card link-card">
-                  <div class="card-content">
-                    <i class="material-icons large">school</i>
-                    <h4>Fiches</h4>
-                    <p style="margin-bottom: 40px; margin-top: 40px;">Fiches pédagogiques</p>
+                <a href="fiches.html" class="card-link">
+                  <div class="card link-card">
+                    <div class="card-content">
+                      <i class="material-icons large" style="color: white;">school</i>
+                      <h4>Fiches</h4>
+                      <p style="margin-bottom: 40px; margin-top: 40px;">Fiches pédagogiques</p>
+                    </div>
                   </div>
-                </div>
+                </a>
               </div>
               <div class="col s12 m3">
-                <div class="card link-card">
-                  <div class="card-content">
-                    <i class="material-icons large">movie</i>
-                    <h4>Genially</h4>
-                    <p style="margin-bottom: 05px; margin-top: 30px;">Ressources interactives conçues avec l'outil Genially</p>
+                <a href="genially.html" class="card-link">
+                  <div class="card link-card">
+                    <div class="card-content">
+                      <i class="material-icons large" style="color: white;">movie</i>
+                      <h4>Genially</h4>
+                      <p style="margin-bottom: 05px; margin-top: 30px;">Ressources interactives conçues avec l'outil Genially</p>
+                    </div>
                   </div>
-                </div>
+                </a>
               </div>
               <div class="col s12 m3">
-                <div class="card link-card">
-                  <div class="card-content">
-                    <i class="material-icons large">devices</i>
-                    <h4>Vidéos</h4>
-                    <p style="margin-bottom: 25px; margin-top: 30px;">Capsules vidéos et tutoriels</p>
+                <a href="videos.html" class="card-link">
+                  <div class="card link-card">
+                    <div class="card-content">
+                      <i class="material-icons large" style="color: white;">devices</i>
+                      <h4>Vidéos</h4>
+                      <p style="margin-bottom: 25px; margin-top: 30px;">Capsules vidéos et tutoriels</p>
+                    </div>
                   </div>
-                </div>
+                </a>
               </div>  
               <div class="col s12 m3">
-                <div class="card link-card">
-                  <div class="card-content">
-                    <i class="material-icons large">school</i>
-                    <h4>Jeux</h4>
-                    <p style="margin-bottom: 20px; margin-top: 35px;">Jeux serieux créés avec Genially et Renpy</p>
+                <a href="jeux.html" class="card-link">
+                  <div class="card link-card">
+                    <div class="card-content">
+                      <i class="material-icons large" style="color: white;">school</i>
+                      <h4>Jeux</h4>
+                      <p style="margin-bottom: 20px; margin-top: 35px;">Jeux serieux créés avec Genially et Renpy</p>
+                    </div>
                   </div>
-                </div>
+                </a>
               </div>  
             </div>
           </div>
@@ -212,7 +259,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   
   <!-- Importation de notre script JavaScript personnalisé -->
-  <script src="js/common.js"></script>
+  <script src="js/script.js"></script>
 
   <!-- Script pour l'effet de fondu au défilement -->
   <script>
@@ -285,6 +332,29 @@
   <!-- Importation du lecteur DotLottie -->
 <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
 
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Initialiser les card-reveal de Materialize
+  var elems = document.querySelectorAll('.carte-competences');
+  M.Modal.init(elems);
+  
+  // Ajuster la hauteur des card-reveal après qu'elles soient ouvertes
+  var activators = document.querySelectorAll('.carte-competences .activator');
+  activators.forEach(function(activator) {
+    activator.addEventListener('click', function() {
+      // Attendre que la carte soit ouverte
+      setTimeout(function() {
+        var reveals = document.querySelectorAll('.carte-competences .card-reveal');
+        reveals.forEach(function(reveal) {
+          // Ajuster la hauteur et s'assurer que le haut est visible
+          reveal.style.maxHeight = '400px';
+          reveal.scrollTop = 0;
+        });
+      }, 100);
+    });
+  });
+});
+</script>
 
 </body>
 </html>

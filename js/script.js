@@ -76,4 +76,52 @@ document.addEventListener('DOMContentLoaded', function() {
       this.reset();
     };
   }
+  
+  // Carrousel Genially - Nouveau code
+  var prevBtn = document.getElementById("prev-btn");
+  var nextBtn = document.getElementById("next-btn");
+  
+  if (prevBtn && nextBtn) {
+    var slideIndex = 0;
+    var slides = document.getElementsByClassName("carousel-slide");
+    
+    // Fonction pour afficher une slide spécifique
+    function showSlide(index) {
+      // Cacher toutes les slides
+      for (var i = 0; i < slides.length; i++) {
+        slides[i].classList.remove("active");
+      }
+      
+      // Afficher la slide demandée
+      slides[index].classList.add("active");
+    }
+    
+    // Bouton suivant
+    nextBtn.addEventListener("click", function() {
+      // Passer à la slide suivante
+      slideIndex++;
+      
+      // Revenir à la première slide si on dépasse la dernière
+      if (slideIndex >= slides.length) {
+        slideIndex = 0;
+      }
+      
+      // Afficher la nouvelle slide
+      showSlide(slideIndex);
+    });
+    
+    // Bouton précédent
+    prevBtn.addEventListener("click", function() {
+      // Passer à la slide précédente
+      slideIndex--;
+      
+      // Aller à la dernière slide si on est à la première
+      if (slideIndex < 0) {
+        slideIndex = slides.length - 1;
+      }
+      
+      // Afficher la nouvelle slide
+      showSlide(slideIndex);
+    });
+  }
 });
