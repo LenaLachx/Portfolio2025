@@ -91,34 +91,33 @@ section {
   background-color: #529b9b;  /* Effet de survol pour les liens */
 }
 
-/* Navigation par points (indicateurs de section) */
-.section-nav {
-  position: fixed;       /* Position fixe à l'écran */
-  right: 20px;           /* À 20px du bord droit */
-  top: 50%;              /* Au milieu verticalement */
-  transform: translateY(-50%);  /* Ajustement pour centrer parfaitement */
-  z-index: 100;          /* Au-dessus du contenu mais sous le menu */
-  display: flex;         /* Utilise flexbox */
-  flex-direction: column;  /* Empile les éléments verticalement */
-  gap: 10px;             /* Espace entre les points */
-}
-
-.section-nav a {
-  width: 12px;           /* Largeur du point */
-  height: 12px;          /* Hauteur du point */
-  border-radius: 50%;    /* Forme circulaire */
-  background-color: rgba(255, 255, 255, 0.5);  /* Blanc semi-transparent */
-  transition: all 0.3s ease;  /* Animation douce lors des changements */
-}
-
-.section-nav a.active {
-  background-color: white;  /* Point actif en blanc plein */
-  transform: scale(1.3);    /* Légèrement plus grand pour indiquer la section active */
-}
 
 /* ========== COMPOSANTS UI ========== */
 /* Cartes pour présenter le contenu */
-.content-card {
+
+.carte-competences {
+  border-radius: 8px;     /* Coins arrondis */
+  overflow: hidden;       /* Cache tout débordement */
+  box-shadow: 0 4px 10px rgba(52, 51, 79, 0.2);  /* Ombre légère */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;  /* Animation au survol */
+  background-color: rgba(255, 255, 255, 0.1);  /* Fond blanc légèrement transparent */
+  backdrop-filter: blur(5px);  /* Effet de flou derrière la carte */
+  height: 100%;           /* Prend toute la hauteur disponible */
+  padding: 20px;          /* Espace intérieur */
+  text-align: center;     /* Centre le texte */
+}
+
+.card-title {
+  font-size: 1.5rem;      /* Taille de police grande */
+  color: #ffdf90;         /* Couleur de l'icône (violet) */
+}
+
+.carte-competences .material-icons {
+  margin-bottom: 15px;    /* Espace sous l'icône */
+  color: #ffdf90;         /* Couleur de l'icône (violet) */
+}
+
+.link-card {
   border-radius: 8px;     /* Coins arrondis */
   overflow: hidden;       /* Cache tout débordement */
   box-shadow: 0 4px 10px rgba(52, 51, 79, 0.2);  /* Ombre légère */
@@ -128,45 +127,65 @@ section {
   height: 100%;           /* Prend toute la hauteur disponible */
 }
 
-.content-card:hover {
+.link-card:hover {
   transform: translateY(-5px);  /* Léger mouvement vers le haut au survol */
-  box-shadow: 0 6px 15px #ffdf90;  /* Ombre plus prononcée */
+  box-shadow: 0 6px 15px #ffe09093;  /* Ombre plus prononcée */
 }
 
-.content-card .card-content {
+.link-card .skill-content {
   padding: 20px;          /* Espace intérieur */
   text-align: center;     /* Centre le texte */
 }
 
-.content-card .material-icons {
+.link-card .material-icons {
   margin-bottom: 15px;    /* Espace sous l'icône */
   color: #ffdf90;         /* Couleur de l'icône (violet) */
 }
 
-/* Boutons personnalisés */
-.custom-btn {
-  background: linear-gradient(to right, #529b9b, #7ddede);  /* Dégradé violet vers bleu */
-  border-radius: 30px;    /* Coins très arrondis */
-  box-shadow: 0 4px 10px rgba(52, 51, 79, 0.2);  /* Ombre légère */
-  transition: all 0.3s ease;  /* Animation douce */
-  text-transform: uppercase;  /* Texte en majuscules */
-  font-weight: bold;      /* Texte en gras */
-  letter-spacing: 1px;    /* Espacement des lettres */
-  margin: 10px;           /* Marge autour du bouton */
+/* Dernière carte ajustée pour correspondre au style global */
+.cv-card {
+  border-radius: 8px;     /* Coins arrondis similaires */
+  overflow: hidden;       /* Cache les débordements */
+  box-shadow: 0 4px 10px rgba(52, 51, 79, 0.2);  /* Ombre douce */
+  background-color: rgba(255, 255, 255, 0.1);  /* Fond légèrement transparent */
+  backdrop-filter: blur(5px);  /* Effet de flou */
+  padding: 20px;          /* Espace intérieur */
+  text-align: center;     /* Texte centré */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;  /* Animation sur survol */
 }
 
-.custom-btn:hover {
-  background: linear-gradient(to right, #7ddede, #529b9b);  /* Dégradé rose vers violet au survol */
-  box-shadow: 0 6px 15px rgba(255, 255, 255, 0.2);  /* Ombre plus prononcée */
-  transform: translateY(-2px);  /* Léger mouvement vers le haut */
+/* Effet sur la carte au survol */
+.cv-card:hover {
+  transform: translateY(-5px);  /* Mouvement léger vers le haut */
+  box-shadow: 0 6px 15px #ffe09093;  /* Ombre accentuée */
+}
+
+.cv-card .card-title {
+  font-size: 1.5rem;      /* Taille de police ajustée */
+  color: #ffdf90;         /* Couleur de texte similaire à la palette */
+}
+
+.cv-card .material-icons {
+  margin-bottom: 15px;    /* Espace sous l'icône */
+  color: #ffdf90;         /* Couleur de l'icône (violet) */
+}
+
+/* Si la carte contient un lien, appliquer les mêmes effets */
+.cv-card a {
+  color: #ffdf90;         /* Liens en couleur violette */
+  text-decoration: none;  /* Pas de soulignement */
+}
+
+.cv-card a:hover {
+  text-decoration: underline;  /* Souligné au survol */
 }
 
 /* ========== FOOTER ========== */
 .page-footer {
   background: linear-gradient(to bottom, #7ddede, #529b9b);  /* Dégradé violet vers bleu */
-  padding: 20px 0;        /* Espace au-dessus et en-dessous */
+  padding:5px 0;        /* Espace au-dessus et en-dessous */
   margin-top: 0;          /* Supprime la marge par défaut */
-  border-top: 2px solid #529b9b;
+  border-top: 1px solid #529b9b;
 }
 
 /* ========== STYLES POUR LES PAGES STANDARDS (NON-PARALLAX) ========== */
