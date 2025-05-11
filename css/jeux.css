@@ -73,7 +73,7 @@
 /* Conteneur pour la capture d'écran et le bouton simplifié */
 .game-screenshot-container {
   position: relative;
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto 40px auto;
   border-radius: 8px;
   overflow: hidden;
@@ -129,11 +129,74 @@
   font-size: 16px;
 }
 
+/* Style pour l'icône d'aide simplifiée */
+.help-icon {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 30px;
+  height: 30px;
+  background-color: #f18192;
+  border-radius: 50%;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  line-height: 30px;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Style pour la boîte d'aide simplifiée */
+.help-box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: 2px solid #3cb0b0;
+  padding: 20px;
+  z-index: 100;
+  width: 80%;
+  max-width: 500px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.help-box-content {
+  color: #333;
+}
+
+.help-box-content h4 {
+  color: #3cb0b0d5;
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.help-box-content ul {
+  padding-left: 20px;
+}
+
+.help-box-content li {
+  margin-bottom: 10px;
+}
+
+.close-help {
+  float: right;
+  cursor: pointer;
+  font-weight: bold;
+  color: #999;
+  font-size: 18px;
+}
+
 /* Footer */
 .page-footer {
   background-color: #5ccfd4;
   padding: 20px 0;
   margin-top: 0;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 /* Responsive */

@@ -47,30 +47,35 @@
         <p>Description de votre jeu : objectifs pédagogiques, public cible, contexte, etc.</p>
       </div>
       
-      <!-- Capture d'écran avec bouton de lancement simplifié -->
-      <div class="game-screenshot-container">
-        <!-- Remplacez le chemin ci-dessous par le chemin vers votre capture d'écran -->
-        <img src="images/capture-jeu.png" alt="Capture d'écran du jeu" class="game-screenshot" style="width: 100%; height: auto;">
-        <a href="Jeu RenPy/UE85-Hoaxbuster/index.html" target="_blank" class="game-btn fixed-btn">Jouer</a>
+     <!-- Conteneur de capture d'écran avec icône d'aide -->
+    <div class="game-screenshot-container">
+      <!-- Icône d'aide simplifiée -->
+      <div class="help-icon" onclick="showInstructions()">?</div>
+      
+      <!-- Pop-up d'instructions simplifié -->
+      <div id="helpBox" class="help-box" style="display: none;">
+        <div class="help-box-content">
+          <span class="close-help" onclick="hideInstructions()">X</span>
+          <h4>Comment jouer</h4>
+          <ul>
+            <li>Utilisez la <strong>souris</strong> pour interagir avec les éléments du jeu</li>
+            <li>Cliquez pour avancer dans les dialogues</li>
+            <li>Faites des choix qui influenceront le déroulement de l'histoire</li>
+            <li>Appuyez sur <strong>ESC</strong> pour accéder au menu du jeu</li>
+          </ul>
+        </div>
       </div>
       
-      <!-- Instructions -->
-      <div class="game-instructions">
-        <h3>Comment jouer</h3>
-        <ul>
-          <li>Utilisez la <strong>souris</strong> pour interagir avec les éléments du jeu</li>
-          <li>Cliquez pour avancer dans les dialogues</li>
-          <li>Faites des choix qui influenceront le déroulement de l'histoire</li>
-          <li>Appuyez sur <strong>ESC</strong> pour accéder au menu du jeu</li>
-        </ul>
-      </div>
+      <!-- Capture d'écran -->
+      <img src="images/capture-jeu.png" alt="Capture d'écran du jeu" class="game-screenshot" style="width: 100%; height: auto;">
+      <a href="Jeu RenPy/UE85-Hoaxbuster/index.html" target="_blank" class="game-btn fixed-btn">Jouer</a>
     </div>
-    
-    <!-- Vous pouvez ajouter d'autres jeux ici -->
+  </div>
+  </div>
   </div>
   
   <!-- Footer -->
-  <footer class="page-footer">
+  <footer class="page-footer" style="width: 100%; left: 0; right: 0; position: relative;">
     <div class="container">
       <div class="row">
         <div class="col s12">
@@ -85,7 +90,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src="js/script.js"></script>
   
-  <!-- Script d'initialisation pour la sidenav -->
+  <!-- Script d'initialisation pour la sidenav et l'aide -->
   <script>
   document.addEventListener('DOMContentLoaded', function() {
     // Initialisation directe de la sidenav
@@ -99,6 +104,15 @@
       instance.open();
     });
   });
+  
+  // Fonctions simples pour afficher/masquer les instructions
+  function showInstructions() {
+    document.getElementById('helpBox').style.display = 'block';
+  }
+  
+  function hideInstructions() {
+    document.getElementById('helpBox').style.display = 'none';
+  }
   </script>
 </body>
 </html>
