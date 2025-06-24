@@ -1,80 +1,148 @@
 <!DOCTYPE html>
+<!-- Ma page de vidéos pédagogiques en français -->
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Page 1</title>
-
-  <!-- Materialize CSS -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet" />
-  <!-- Icônes Materialize -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mes Vidéos Pédagogiques</title>
+  
+  <!-- Mes ressources externes -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <!-- Ton CSS -->
-  <link href="css/style.css" rel="stylesheet" />
+  
+  <!-- Mes styles personnalisés -->
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/videos.css" rel="stylesheet">
+  
+  <!-- Animation Lottie -->
+  <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.js"></script>
 </head>
-<body>
 
-  <!-- Barre de navigation -->
-  <nav>
-    <div class="nav-wrapper red lighten-3">
-      <!-- Menu burger à gauche -->
-      <a href="#" data-target="mobile-nav" class="sidenav-trigger left">
-        <i class="material-icons">menu</i>
-      </a>
-
-      <!-- Logo centré (mon site) non cliquable -->
-      <span class="brand-logo center">Mon Site</span>
-
-      <!-- Menu horizontal desktop à droite -->
-      <ul class="right hide-on-med-and-down" id="menu-desktop">
-        <li><a href="index.html">Accueil</a></li> <!-- Ce lien est visible sur toutes les pages -->
-        <li><a href="page1.html">Page 1</a></li>
-        <li><a href="page2.html">Page 2</a></li>
-        <li><a href="page3.html">Page 3</a></li>
-        <li><a href="page4.html">Page 4</a></li>
-        <li><a href="page5.html">Page 5</a></li>
-      </ul>
-    </div>
-  </nav>
+<body class="videos-page">
+  <!-- Menu hamburger pour mobile -->
+  <a href="#" data-target="mobile-nav" class="sidenav-trigger" id="menu-toggle">
+    <i class="material-icons">menu</i>
+  </a>
 
   <!-- Menu latéral mobile -->
   <ul class="sidenav" id="mobile-nav">
-    <li><a href="index.html">Accueil</a></li>
-    <li><a href="page1.html">Page 1</a></li>
-    <li><a href="page2.html">Page 2</a></li>
-    <li><a href="page3.html">Page 3</a></li>
-    <li><a href="page4.html">Page 4</a></li>
-    <li><a href="page5.html">Page 5</a></li>
+    <li><a href="Accueil.html">Accueil</a></li>
+    <li><a href="cv.html">CV</a></li>
+    <li><a href="fiches.html">Fiches pédagogiques</a></li>
+    <li><a href="genially.html">Ressources Genially</a></li>
+    <li><a href="videos.html">Vidéos</a></li>
+    <li><a href="jeux.html">Serious Games</a></li>
+    <li><a href="contact.html">Contact</a></li>
   </ul>
 
-  <!-- Contenu principal -->
-  <div class="container">
-    <h1 class="center-align">Bienvenue sur la Page 1</h1>
-    <p class="flow-text">Voici le contenu de la première page.</p>
+  <div class="main-content">
+    <div class="container">
+      <!-- Ma présentation -->
+      <section id="presentation" class="section">
+        <div class="row">
+          <div class="col s12 center-align">
+            <h1 class="page-title">Mes Vidéos Pédagogiques</h1>
+            <h2 class="page-subtitle">Capsules vidéo et tutoriels</h2>
+            <dotlottie-player src="https://lottie.host/81cfe70f-f5ed-4644-9be5-ca541db97452/Tnm1sGjmqa.lottie" background="transparent" speed="1" style="width: 200px; height: 200px; display: block; margin: auto; margin-bottom: 30px;" loop autoplay></dotlottie-player>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Mes vidéos -->
+      <section id="videos" class="section">
+        <div class="row">
+          <!-- Vidéo CrossFit -->
+          <div class="col s12 m12 l12">
+            <div class="video-card">
+              <div class="video-container">
+                <video width="100%" height="auto" controls preload="none" poster="images/Minia_crossfit.png">
+                  <source src="Vidéos/Capsule_Crossfit.mp4" type="video/mp4">
+                  Votre navigateur ne supporte pas la lecture de vidéos.
+                </video>
+              </div>
+              <div class="video-content">
+                <h3 class="video-title">Une séance de CrossFit</h3>
+                <p class="video-description">Capsule vidéo détaillant le déroulement d'une séance de CrossFit.</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Tutoriel Garageband -->
+          <div class="col s12 m12 l12">
+            <div class="video-card">
+              <div class="video-container">
+                <video width="100%" height="auto" controls preload="none" poster="images/Minia_Tuto.png">
+                  <source src="Vidéos/Lachaux Lena_Tutoriel.mp4" type="video/mp4">
+                  Votre navigateur ne supporte pas la lecture de vidéos.
+                </video>
+              </div>
+              <div class="video-content">
+                <h3 class="video-title">Tutoriel vidéo - Prise en main de Garageband</h3>
+                <p class="video-description">Tutoriel vidéo pour découvirr la prise en main de l'application Garageband pour des élèves de 3ème.</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Capsule Musiques électroniques -->
+          <div class="col s12 m12 l12">
+            <div class="video-card">
+              <div class="video-container">
+                <video width="100%" height="auto" controls preload="none" poster="images/Minia_Capsule.png">
+                  <source src="Vidéos/Lachaux Lena_Capsule.mp4" type="video/mp4">
+                  Votre navigateur ne supporte pas la lecture de vidéos.
+                </video>
+              </div>
+              <div class="video-content">
+                <h3 class="video-title">Capsule pédagogique - Musiques électroniques</h3>
+                <p class="video-description">Capsule vidéo d'introduction aux différents genres de musiques électroniques pour les élèves de 3ème.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
   </div>
+  
+  <!-- Mon pied de page -->
+  <footer class="page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col s12">
+          <h5 class="white-text">Léna Lachaux</h5>
+          <p class="grey-text text-lighten-4">© 2025 Tous droits réservés</p>
+        </div>
+      </div>
+    </div>
+  </footer>
 
-  <!-- jQuery -->
+  <!-- Mes scripts -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <!-- Materialize JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <!-- Script JS -->
-  <script src="js/script.js"></script>
-
-  <!-- JavaScript pour mettre en surbrillance le lien actif -->
+  
+  <!-- Mon script pour les interactions -->
   <script>
-    $(document).ready(function () {
-      // Récupérer l'URL actuelle de la page
-      var currentPage = window.location.pathname;
-
-      // Ajouter la classe "active" au lien correspondant
-      $('#menu-desktop a').each(function () {
-        if (this.href.indexOf(currentPage) !== -1) {
-          $(this).parent().addClass('active');
-        }
+    document.addEventListener('DOMContentLoaded', function() {
+      // Pour mon menu mobile
+      var elems = document.querySelectorAll('.sidenav');
+      M.Sidenav.init(elems);
+      
+      document.getElementById('menu-toggle').addEventListener('click', function(e) {
+        e.preventDefault();
+        M.Sidenav.getInstance(document.getElementById('mobile-nav')).open();
       });
-
-      // Initialiser le menu mobile
-      $('.sidenav').sidenav();
+      
+      // Pour l'animation des cartes vidéo quand on scrolle
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.1 });
+      
+      document.querySelectorAll('.video-card').forEach(card => {
+        observer.observe(card);
+      });
     });
   </script>
 </body>

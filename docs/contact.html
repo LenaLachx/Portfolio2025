@@ -1,80 +1,154 @@
 <!DOCTYPE html>
+<!-- Page HTML en français -->
 <html lang="fr">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Page 1</title>
+  <!-- Informations de base et encodage -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Mon Portfolio</title>
 
-  <!-- Materialize CSS -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet" />
-  <!-- Icônes Materialize -->
+  <!-- Mes ressources externes -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <!-- Ton CSS -->
-  <link href="css/style.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Mes styles personnalisés -->
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/contact.css" rel="stylesheet">
+
+  <!-- Ma police principale -->
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 </head>
+
 <body>
-
-  <!-- Barre de navigation -->
-  <nav>
-    <div class="nav-wrapper red lighten-3">
-      <!-- Menu burger à gauche -->
-      <a href="#" data-target="mobile-nav" class="sidenav-trigger left">
-        <i class="material-icons">menu</i>
-      </a>
-
-      <!-- Logo centré (mon site) non cliquable -->
-      <span class="brand-logo center">Mon Site</span>
-
-      <!-- Menu horizontal desktop à droite -->
-      <ul class="right hide-on-med-and-down" id="menu-desktop">
-        <li><a href="index.html">Accueil</a></li> <!-- Ce lien est visible sur toutes les pages -->
-        <li><a href="page1.html">Page 1</a></li>
-        <li><a href="page2.html">Page 2</a></li>
-        <li><a href="page3.html">Page 3</a></li>
-        <li><a href="page4.html">Page 4</a></li>
-        <li><a href="page5.html">Page 5</a></li>
-      </ul>
-    </div>
-  </nav>
+  <!-- Menu hamburger pour mobile -->
+  <a href="#" data-target="mobile-nav" class="sidenav-trigger" id="menu-toggle">
+    <i class="material-icons">menu</i>
+  </a>
 
   <!-- Menu latéral mobile -->
   <ul class="sidenav" id="mobile-nav">
-    <li><a href="index.html">Accueil</a></li>
-    <li><a href="page1.html">Page 1</a></li>
-    <li><a href="page2.html">Page 2</a></li>
-    <li><a href="page3.html">Page 3</a></li>
-    <li><a href="page4.html">Page 4</a></li>
-    <li><a href="page5.html">Page 5</a></li>
+    <li><a href="Accueil.html">Accueil</a></li>
+    <li><a href="cv.html">CV</a></li>
+    <li><a href="fiches.html">Fiches pédagogiques</a></li>
+    <li><a href="genially.html">Ressources Genially</a></li>
+    <li><a href="videos.html">Vidéos</a></li>
+    <li><a href="jeux.html">Serious Games</a></li>
+    <li><a href="contact.html">Contact</a></li>
   </ul>
 
-  <!-- Contenu principal -->
-  <div class="container">
-    <h1 class="center-align">Bienvenue sur la Page 1</h1>
-    <p class="flow-text">Voici le contenu de la première page.</p>
-  </div>
+  <!-- Section principale avec formulaire -->
+  <section id="contact-section">
+    <div class="fade-text">
+      <div class="container">
+        <div class="row">
+          <div class="col s12 center-align">
+            <h1 style="color:#f18192;">Me contacter</h1>
+            <p class="flow-text">N'hésitez pas à me contacter pour toute question ou proposition de collaboration.</p>
+            
+            <!-- Formulaire de contact -->
+            <div class="card contact-card">
+              <div class="card-content">
+                <form id="contact-form">
+                  <div class="row">
+                    <div class="input-field col s12 m6">
+                      <i class="material-icons prefix">account_circle</i>
+                      <input id="name" type="text" class="validate" required>
+                      <label for="name">Nom</label>
+                    </div>
+                    <div class="input-field col s12 m6">
+                      <i class="material-icons prefix">email</i>
+                      <input id="email" type="email" class="validate" required>
+                      <label for="email">Email</label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="input-field col s12">
+                      <i class="material-icons prefix">title</i>
+                      <input id="subject" type="text" class="validate" required>
+                      <label for="subject">Sujet</label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="input-field col s12">
+                      <i class="material-icons prefix">message</i>
+                      <textarea id="message" class="materialize-textarea validate" required></textarea>
+                      <label for="message">Message</label>
+                    </div>
+                  </div>
+                  <div class="row center-align">
+                    <button class="btn waves-effect waves-light submit-btn" type="submit">
+                      Envoyer
+                      <i class="material-icons right">send</i>
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+            
+            <!-- Mes réseaux sociaux -->
+            <div class="social-links">
+              <h3>Retrouvez-moi sur</h3>
+              <div class="social-icons">
+                <a href="https://www.linkedin.com/in/lena-lachaux-736783186/" target="_blank" class="social-icon linkedin">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://www.imdb.com/fr/name/nm15536329/" target="_blank" class="social-icon imdb">
+                  <i class="fab fa-imdb"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <!-- jQuery -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <!-- Materialize JS -->
+  <!-- Pied de page -->
+  <footer class="page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col s12">
+          <h5 class="white-text">Léna Lachaux</h5>
+          <p class="grey-text text-lighten-4">© 2025 Tous droits réservés</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts nécessaires -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <!-- Script JS -->
   <script src="js/script.js"></script>
-
-  <!-- JavaScript pour mettre en surbrillance le lien actif -->
+  <script src="js/contact.js"></script>
+  
+  <!-- Script optimisé pour les effets et le menu -->
   <script>
-    $(document).ready(function () {
-      // Récupérer l'URL actuelle de la page
-      var currentPage = window.location.pathname;
-
-      // Ajouter la classe "active" au lien correspondant
-      $('#menu-desktop a').each(function () {
-        if (this.href.indexOf(currentPage) !== -1) {
-          $(this).parent().addClass('active');
-        }
+    document.addEventListener('DOMContentLoaded', function() {
+      // Effet de fondu au défilement
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          } else {
+            entry.target.classList.remove('visible');
+          }
+        });
+      }, { threshold: 0.4 });
+      
+      document.querySelectorAll('.fade-text').forEach(el => {
+        observer.observe(el);
       });
-
-      // Initialiser le menu mobile
-      $('.sidenav').sidenav();
+      
+      // Initialisation du menu mobile
+      var elems = document.querySelectorAll('.sidenav');
+      var instances = M.Sidenav.init(elems);
+      
+      document.getElementById('menu-toggle').addEventListener('click', function(e) {
+        e.preventDefault();
+        M.Sidenav.getInstance(document.getElementById('mobile-nav')).open();
+      });
     });
   </script>
 </body>

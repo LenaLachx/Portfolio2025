@@ -1,80 +1,192 @@
 <!DOCTYPE html>
+<!-- Ma page de fiches pédagogiques en français -->
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Page 1</title>
-
-  <!-- Materialize CSS -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet" />
-  <!-- Icônes Materialize -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fiches Pédagogiques</title>
+  
+  <!-- Mes ressources externes -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <!-- Ton CSS -->
-  <link href="css/style.css" rel="stylesheet" />
+  
+  <!-- Mes styles personnalisés -->
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/fiches.css" rel="stylesheet">
+  
+  <!-- Animation Lottie -->
+  <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.js"></script>
 </head>
-<body>
 
-  <!-- Barre de navigation -->
-  <nav>
-    <div class="nav-wrapper red lighten-3">
-      <!-- Menu burger à gauche -->
-      <a href="#" data-target="mobile-nav" class="sidenav-trigger left">
-        <i class="material-icons">menu</i>
-      </a>
-
-      <!-- Logo centré (mon site) non cliquable -->
-      <span class="brand-logo center">Mon Site</span>
-
-      <!-- Menu horizontal desktop à droite -->
-      <ul class="right hide-on-med-and-down" id="menu-desktop">
-        <li><a href="index.html">Accueil</a></li> <!-- Ce lien est visible sur toutes les pages -->
-        <li><a href="page1.html">Page 1</a></li>
-        <li><a href="page2.html">Page 2</a></li>
-        <li><a href="page3.html">Page 3</a></li>
-        <li><a href="page4.html">Page 4</a></li>
-        <li><a href="page5.html">Page 5</a></li>
-      </ul>
-    </div>
-  </nav>
+<body class="fiches-page">
+  <!-- Menu hamburger pour mobile -->
+  <a href="#" data-target="mobile-nav" class="sidenav-trigger" id="menu-toggle">
+    <i class="material-icons">menu</i>
+  </a>
 
   <!-- Menu latéral mobile -->
   <ul class="sidenav" id="mobile-nav">
-    <li><a href="index.html">Accueil</a></li>
-    <li><a href="page1.html">Page 1</a></li>
-    <li><a href="page2.html">Page 2</a></li>
-    <li><a href="page3.html">Page 3</a></li>
-    <li><a href="page4.html">Page 4</a></li>
-    <li><a href="page5.html">Page 5</a></li>
+    <li><a href="Accueil.html">Accueil</a></li>
+    <li><a href="cv.html">CV</a></li>
+    <li><a href="fiches.html">Fiches pédagogiques</a></li>
+    <li><a href="genially.html">Ressources Genially</a></li>
+    <li><a href="videos.html">Vidéos</a></li>
+    <li><a href="jeux.html">Serious Games</a></li>
+    <li><a href="contact.html">Contact</a></li>
   </ul>
 
-  <!-- Contenu principal -->
-  <div class="container">
-    <h1 class="center-align">Bienvenue sur la Page 1</h1>
-    <p class="flow-text">Voici le contenu de la première page.</p>
+  <div class="main-content">
+    <div class="container">
+      <!-- Ma présentation -->
+      <section id="presentation" class="section">
+        <div class="row">
+          <div class="col s12 center-align">
+            <h1 class="page-title">Mes Fiches Pédagogiques</h1>
+            <h2 class="page-subtitle">Ressources pour l'enseignement</h2>
+            <dotlottie-player src="https://lottie.host/81cfe70f-f5ed-4644-9be5-ca541db97452/Tnm1sGjmqa.lottie" background="transparent" speed="1" style="width: 200px; height: 200px; display: block; margin: auto; margin-bottom: 30px;" loop autoplay></dotlottie-player>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Mes fiches pédagogiques -->
+      <section id="fiches" class="section">
+        <div class="row">
+          <!-- Fiche 1 - Fake News -->
+          <div class="col s12 m12 l4">
+            <div class="card">
+              <div class="card-image">
+                <embed src="pdf/Fiche de suivie de jeu.pdf" alt="Fiche Suivi de Jeu - Serious Game EMI">
+                <a class="zoom-btn" onclick="openPdfPreview('pdf/Fiche de suivie de jeu.pdf', 'Éducation aux Médias - Fiche de suivie de Jeu')">
+                  <i class="material-icons">search</i>
+                </a>
+              </div>
+              <div class="card-content">
+                <span class="card-title">Éducation aux Médias - Serious Game</span>
+                <p>Fiche de suivie de Jeu - Hoaxbuster : Chasseur de Fake News.</p>
+              </div>
+              <div class="card-action">
+                <a href="pdf/Fiche de suivie de jeu.pdf" download class="download-btn">
+                  <i class="material-icons">file_download</i> Télécharger
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Fiche 2 - Musique électronique -->
+          <div class="col s12 m12 l4">
+            <div class="card">
+              <div class="card-image">
+                <embed src="pdf/UE87 - Fiches Synthèses.pdf" alt="Séance 1 - Education musicale 3èmes">
+                <a class="zoom-btn" onclick="openPdfPreview('pdf/UE87 - Fiches Synthèses.pdf', 'Education musicale - Les musiques électroniques (Séance 1)')">
+                  <i class="material-icons">search</i>
+                </a>
+              </div>
+              <div class="card-content">
+                <span class="card-title">Education musicale - Les musiques électroniques</span>
+                <p>Fiche Synthèse d'une séance sur l'Histoire des musiques électroniques</p>
+              </div>
+              <div class="card-action">
+                <a href="pdf/UE87 - Fiches Synthèses.pdf" download class="download-btn">
+                  <i class="material-icons">file_download</i> Télécharger
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Fiche 3 - Écoute musicale -->
+          <div class="col s12 m12 l4">
+            <div class="card">
+              <div class="card-image">
+                <embed src="pdf/UE87 - Fiche Synthèse 2.pdf" alt="Séance 2 - Education musicale 3èmes">
+                <a class="zoom-btn" onclick="openPdfPreview('pdf/UE87 - Fiche Synthèse 2.pdf', 'Education musicale - Les musiques électroniques (Séance 2)')">
+                  <i class="material-icons">search</i>
+                </a>
+              </div>
+              <div class="card-content">
+                <span class="card-title">Education musicale - Les musiques électroniques</span>
+                <p>Fiche Synthèse d'une séance d'écoute comparée.</p>
+              </div>
+              <div class="card-action">
+                <a href="pdf/UE87 - Fiche Synthèse 2.pdf" download class="download-btn">
+                  <i class="material-icons">file_download</i> Télécharger
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
   </div>
+  
+  <!-- Ma fenêtre de prévisualisation PDF -->
+  <div id="pdf-preview-overlay" class="pdf-preview-overlay">
+    <div class="pdf-preview-container">
+      <div class="pdf-preview-header">
+        <h5 id="pdf-preview-title"></h5>
+        <a class="pdf-preview-close" onclick="closePdfPreview()">
+          <i class="material-icons">close</i>
+        </a>
+      </div>
+      <div class="pdf-preview-content">
+        <object id="pdf-preview-object" type="application/pdf">
+          <p>Votre navigateur ne prend pas en charge l'affichage des PDF.
+            <a id="pdf-preview-fallback-link" download>Téléchargez le PDF</a> à la place.</p>
+        </object>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Mon pied de page -->
+  <footer class="page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col s12">
+          <h5 class="white-text">Léna Lachaux</h5>
+          <p class="grey-text text-lighten-4">© 2025 Tous droits réservés</p>
+        </div>
+      </div>
+    </div>
+  </footer>
 
-  <!-- jQuery -->
+  <!-- Mes scripts -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <!-- Materialize JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <!-- Script JS -->
-  <script src="js/script.js"></script>
-
-  <!-- JavaScript pour mettre en surbrillance le lien actif -->
+  
+  <!-- Mon script pour les interactions -->
   <script>
-    $(document).ready(function () {
-      // Récupérer l'URL actuelle de la page
-      var currentPage = window.location.pathname;
-
-      // Ajouter la classe "active" au lien correspondant
-      $('#menu-desktop a').each(function () {
-        if (this.href.indexOf(currentPage) !== -1) {
-          $(this).parent().addClass('active');
-        }
+    // Quand la page est chargée
+    document.addEventListener('DOMContentLoaded', function() {
+      // Pour le menu mobile
+      var elems = document.querySelectorAll('.sidenav');
+      M.Sidenav.init(elems);
+      
+      // Pour ouvrir le menu quand on clique sur le bouton
+      document.getElementById('menu-toggle').addEventListener('click', function(e) {
+        e.preventDefault();
+        M.Sidenav.getInstance(document.getElementById('mobile-nav')).open();
       });
-
-      // Initialiser le menu mobile
-      $('.sidenav').sidenav();
+    });
+    
+    // Pour ouvrir la prévisualisation PDF
+    function openPdfPreview(pdfUrl, title) {
+      document.getElementById('pdf-preview-title').textContent = title;
+      document.getElementById('pdf-preview-object').setAttribute('data', pdfUrl);
+      document.getElementById('pdf-preview-fallback-link').setAttribute('href', pdfUrl);
+      document.getElementById('pdf-preview-overlay').style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    }
+    
+    // Pour fermer la prévisualisation PDF
+    function closePdfPreview() {
+      document.getElementById('pdf-preview-overlay').style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+    
+    // Pour fermer la prévisualisation en cliquant à l'extérieur
+    document.getElementById('pdf-preview-overlay').addEventListener('click', function(e) {
+      if (e.target === this) {
+        closePdfPreview();
+      }
     });
   </script>
 </body>
