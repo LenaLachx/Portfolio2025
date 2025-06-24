@@ -1,68 +1,57 @@
-/* ========== STYLES DE BASE ========== */
+/* ========== MES STYLES DE BASE ========== */
 body, html {
-  margin: 0;          /* Supprime les marges par défaut */
-  padding: 0;         /* Supprime les rembourrages par défaut */
-  font-family: ba;   /* Définit la police sans-serif pour tout le site */
-  scroll-behavior: smooth;   /* Permet un défilement fluide lors de la navigation */
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  scroll-behavior: smooth;
 }
 
-/* Police du titre principal */
+/* Ma police pour les titres */
 h1 {
-  font-family: 'Libre Baskerville',serif;
+  font-family: 'Libre Baskerville', serif;
 }
 
-/* Police pour le reste du texte */
+/* Ma police pour le reste du texte */
 h2, h3, h4, h5, h6, p, a {
-  font-family: 'Arial',sans-serif;
+  font-family: 'Arial', sans-serif;
 }
 
-/* ========== MENU ET NAVIGATION ========== */
-/* Style du bouton hamburger pour le menu */
+/* ========== MON MENU DE NAVIGATION ========== */
+/* Mon bouton hamburger */
 .sidenav-trigger {
-  position: fixed;    /* Le bouton reste fixe à l'écran pendant le défilement */
-  top: 20px;          /* Position à 20px du haut */
-  left: 20px;         /* Position à 20px de la gauche */
-  z-index: 1000;      /* Assure que le bouton reste toujours au-dessus des autres éléments */
-  background-color: rgba(0, 0, 0, 0.3);  /* Fond noir semi-transparent */
-  padding: 10px;      /* Espace à l'intérieur du bouton */
-  border-radius: 5px; /* Coins arrondis */
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  border-radius: 5px;
 }
 
 .sidenav-trigger i {
-  color: white;       /* Couleur de l'icône en blanc */
-  font-size: 30px;    /* Taille de l'icône */
+  color: white;
+  font-size: 30px;
 }
 
-/* Style du menu latéral mobile */
+/* Mon menu latéral mobile */
 .sidenav {
-  background-color: #529b9b !important;  /* Fond noir semi-transparent */
-  color: white !important;  /* Texte en blanc */
-  padding-top: 80px;  /* Espace en haut pour que le menu commence sous le bouton */
+  background-color: #529b9b !important;
+  color: white !important;
+  padding-top: 80px;
 }
 
 .sidenav a {
-  color: white !important;  /* Liens en blanc */
+  color: white !important;
 }
 
 .sidenav a:hover {
-  background-color: #529b9b;  /* Effet de survol pour les liens */
+  background-color: #529b9b;
 }
 
-/* ========== FOOTER ========== */
+/* ========== MON PIED DE PAGE ========== */
 .page-footer {
-  background: linear-gradient(to bottom, #7ddede, #529b9b);  /* Dégradé violet vers bleu */
-  padding: 5px 0;        /* Espace au-dessus et en-dessous */
-  margin-top: 0;          /* Supprime la marge par défaut */
+  background: linear-gradient(to bottom, #7ddede, #529b9b);
+  padding: 5px 0;
+  margin-top: 0;
   border-top: 1px solid #529b9b;
-}
-
-/* ========== MEDIA QUERIES POUR RESPONSIVE ========== */
-/* Tablettes et petits écrans */
-@media only screen and (max-width: 768px) {
-  /* Styles communs pour les écrans moyens */
-}
-
-/* Smartphones */
-@media only screen and (max-width: 600px) {
-  /* Styles communs pour les petits écrans */
 }

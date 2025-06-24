@@ -1,0 +1,278 @@
+/* ========== MA PAGE DE FICHES PÉDAGOGIQUES ========== */
+
+/* Mon style général */
+.fiches-page {
+  background-color: #fae6b437;
+  color: #333;
+}
+
+/* Mon titre principal */
+.page-title {
+  color: #f18192;
+  font-size: 60px;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+/* Mon sous-titre */
+.page-subtitle {
+  color: #3cb0b0d5;
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 30px;
+}
+
+/* Mes cartes de fiches */
+.card {
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: white;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0,0,0,0.2);
+}
+
+/* Images dans mes cartes */
+.card .card-image {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.card .card-image embed {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Contenu de mes cartes */
+.card .card-content {
+  flex-grow: 1;
+  padding: 20px;
+}
+
+.card .card-title {
+  color: #f18192 !important;
+  font-weight: bold !important;
+  font-size: 22px !important;
+  margin-bottom: 15px;
+}
+
+.card .card-content p {
+  color: #555;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Boutons dans mes cartes */
+.card .card-action {
+  padding: 15px 20px;
+  border-top: 1px solid rgba(160, 160, 160, 0.2);
+}
+
+.card .card-action a {
+  color: #3cb0b0d5 !important;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  margin-right: 10px !important;
+}
+
+.card .card-action a:hover {
+  color: #f18192 !important;
+  text-decoration: none;
+}
+
+/* Mon bouton loupe */
+.zoom-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(241, 129, 146, 0.8);
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  z-index: 10;
+}
+
+.zoom-btn:hover {
+  background-color: #f18192;
+  transform: scale(1.1);
+}
+
+/* Mon animation d'apparition */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Ma fenêtre de prévisualisation PDF */
+.pdf-preview-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  z-index: 2000;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.pdf-preview-container {
+  width: 95%;
+  height: 95%;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+  animation: scaleIn 0.3s ease-out forwards;
+}
+
+.pdf-preview-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #ddd;
+}
+
+.pdf-preview-header h5 {
+  color: #f18192;
+  margin: 0;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.pdf-preview-close {
+  cursor: pointer;
+  color: #777;
+  transition: color 0.2s;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.pdf-preview-close:hover {
+  color: #f18192;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.pdf-preview-content {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+}
+
+.pdf-preview-content object {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Mon animation d'entrée pour la prévisualisation */
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Mon bouton de téléchargement */
+.download-btn {
+  display: inline-flex;
+  align-items: center;
+}
+
+.download-btn i {
+  margin-right: 5px;
+}
+
+/* Mon animation pour l'élément Lottie */
+dotlottie-player {
+  transition: transform 0.3s ease;
+}
+
+dotlottie-player:hover {
+  transform: scale(1.05);
+}
+
+/* Espacement pour mes rangées de cartes */
+.row .col {
+  margin-bottom: 20px;
+}
+
+/* Mon design responsive */
+@media only screen and (max-width: 992px) {
+  .page-title {
+    font-size: 50px;
+  }
+  
+  .page-subtitle {
+    font-size: 24px;
+  }
+  
+  .pdf-preview-container {
+    width: 98%;
+    height: 98%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .page-title {
+    font-size: 40px;
+    margin-top: 30px;
+  }
+  
+  .page-subtitle {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .card .card-image {
+    height: 180px;
+  }
+  
+  .card .card-image embed {
+    height: 180px;
+  }
+  
+  .pdf-preview-header h5 {
+    font-size: 16px;
+    max-width: 80%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

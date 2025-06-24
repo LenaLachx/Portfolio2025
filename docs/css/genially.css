@@ -1,4 +1,6 @@
-/* Styles pour la page Genially */
+/* ========== MA PAGE GENIALLY ========== */
+
+/* Mon style général */
 .genially-page {
   background-color: #fae6b437;
   color: white;
@@ -7,7 +9,7 @@
   flex-direction: column;
 }
 
-/* Titre principal */
+/* Mon titre principal */
 .genially-title {
   color: #f18192;
   text-align: center;
@@ -16,39 +18,26 @@
   font-size: 60px;
 }
 
-/* Titres de section */
+/* Mes titres de section */
 .section-title {
   color: #3cb0b0d5;
   text-align: center;
   margin-bottom: 30px;
 }
 
-/* Carte de présentation */
-.presentation-card {
-  background-color: #f18192;
-  border-radius: 8px;
-  padding: 10px;
-  margin-bottom: 50px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  color: white;
-  text-align: center;
-  min-height: 150px; /* Hauteur minimale pour uniformiser */
-}
-
-/* Structure du carrousel */
+/* Mon carrousel */
 .carousel-container {
   position: relative;
   max-width: 1000px;
   margin: 0 auto 50px auto;
-  padding: 0 50px; /* Espace pour les flèches */
+  padding: 0 50px;
 }
 
-/* Conteneur pour les slides avec position relative */
 .carousel-slides-wrapper {
   position: relative;
 }
 
-/* Slides du carrousel */
+/* Mes slides */
 .carousel-slide {
   display: none;
 }
@@ -57,10 +46,10 @@
   display: block;
 }
 
-/* Conteneur pour les iframes Genially */
+/* Mes iframes Genially */
 .genially-container {
   position: relative;
-  padding-bottom: 56.25%; /* Ratio 16:9 */
+  padding-bottom: 56.25%;
   height: 0;
   overflow: hidden;
   margin-bottom: 10px;
@@ -77,13 +66,14 @@
   border: none;
 }
 
-/* Titres et descriptions des slides */
+/* Mes titres de slide */
 .slide-title {
   color: #3cb0b0d5;
   text-align: center;
   margin-top: 20px;
   font-size: 40px;
 }
+
 .slide-title2 {
   color: #3cb0b0d5;
   text-align: center;
@@ -105,10 +95,10 @@
   font-size: 18px;
 }
 
-/* Flèches de navigation */
+/* Mes flèches de navigation */
 .carousel-arrow {
   position: absolute;
-  top: 350px; /* Position fixe depuis le haut */
+  top: 350px;
   transform: translateY(-50%);
   z-index: 100;
   background-color: rgba(241, 129, 146, 0.8);
@@ -141,7 +131,7 @@
   right: -40px;
 }
 
-/* Correction pour le footer */
+/* Mon pied de page */
 .page-footer {
   background-color: #5ccfd4;
   width: 100%;
@@ -149,12 +139,12 @@
   padding: 10px 0;
 }
 
-/* Correction pour le conteneur principal */
+/* Mon contenu principal */
 .main-content {
   flex: 1;
 }
 
-/* Media queries pour responsive */
+/* Mon design responsive */
 @media only screen and (max-width: 768px) {
   .carousel-arrow {
     width: 40px;

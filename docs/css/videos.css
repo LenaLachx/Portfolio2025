@@ -1,0 +1,137 @@
+/* ========== MA PAGE DE VIDÉOS ========== */
+
+/* Mon style général */
+.videos-page {
+  background-color: #fae6b437;
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Mon titre principal */
+.page-title {
+  color: #f18192;
+  font-size: 60px;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+/* Mon sous-titre */
+.page-subtitle {
+  color: #3cb0b0d5;
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 30px;
+}
+
+/* Mes cartes vidéo */
+.video-card {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.video-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.video-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0,0,0,0.2);
+}
+
+/* Mon conteneur vidéo responsive */
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Mon contenu des cartes vidéo */
+.video-content {
+  padding: 20px;
+}
+
+.video-title {
+  color: #f18192;
+  font-size: 22px;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.video-description {
+  color: #555;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+/* Mon animation Lottie */
+dotlottie-player {
+  transition: transform 0.3s ease;
+}
+
+dotlottie-player:hover {
+  transform: scale(1.05);
+}
+
+/* Mon animation d'entrée */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mon design responsive */
+@media only screen and (max-width: 992px) {
+  .page-title {
+    font-size: 50px;
+  }
+  
+  .page-subtitle {
+    font-size: 24px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .page-title {
+    font-size: 40px;
+    margin-top: 30px;
+  }
+  
+  .page-subtitle {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .video-title {
+    font-size: 20px;
+  }
+}
+
+/* Mon espacement pour les cartes */
+.row .col {
+  margin-bottom: 20px;
+}

@@ -1,0 +1,164 @@
+/* ========== MA PAGE DE CONTACT ========== */
+
+/* Ma section principale */
+#contact-section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  color: #333;
+  transition: opacity 1s ease-out;
+  padding: 80px 20px;
+  box-sizing: border-box;
+  background: #fae6b437;
+}
+
+/* Mon titre principal */
+#contact-section h1 {
+  color: #f18192;
+  margin-bottom: 20px;
+}
+
+/* Mon effet d'apparition progressive */
+.fade-text {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+  width: 100%;
+}
+
+.fade-text.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Ma carte de formulaire */
+.contact-card {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(52, 51, 79, 0.2);
+  background-color: #fff8e3;
+  margin: 30px 0;
+  padding: 20px;
+}
+
+/* Mes champs de formulaire */
+.input-field input[type=text],
+.input-field input[type=email],
+.input-field textarea.materialize-textarea {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  color: #333;
+}
+
+/* Mes étiquettes de champs */
+.input-field label {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+/* Mes étiquettes actives */
+.input-field input:focus + label,
+.input-field textarea:focus + label {
+  color: #f18192 !important;
+}
+
+/* Mes champs actifs */
+.input-field input:focus,
+.input-field textarea:focus {
+  border-bottom: 1px solid #f18192 !important;
+  box-shadow: 0 1px 0 0 #f18192 !important;
+}
+
+/* Mes icônes de formulaire */
+.input-field .prefix {
+  color: #f18192;
+}
+
+.input-field .prefix.active {
+  color: #f18192;
+}
+
+/* Mon bouton d'envoi */
+.submit-btn {
+  background-color: #ffdf90;
+  color: #333;
+  border-radius: 30px;
+  padding: 0 30px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #f18192;
+  color: white;
+  transform: translateY(-3px);
+}
+
+/* Ma section réseaux sociaux */
+.social-links {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.social-links h3 {
+  color: #f18192;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.social-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #ffdf90;
+  color: #000000;
+  font-size: 28px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+}
+
+.social-icon.linkedin:hover {
+  background-color: #0077b5;
+  color: white;
+}
+
+.social-icon.imdb:hover {
+  background-color: #f5c518;
+  color: #000000;
+}
+
+/* Mon texte descriptif */
+#contact-section .flow-text {
+  color: #333;
+}
+
+/* Mon design responsive */
+@media only screen and (max-width: 600px) {
+  .social-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+  }
+  
+  #contact-section {
+    padding: 60px 15px;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+  }
+}

@@ -112,7 +112,7 @@ section {
 }
 
 .carte-competences .card-reveal::-webkit-scrollbar-thumb {
-  background-color: #ffdf90;  /* Couleur de la barre (jaune comme vos accents) */
+  background-color: #ffdf90;  /* Couleur de la barre */
   border-radius: 4px;     /* Coins arrondis */
 }
 

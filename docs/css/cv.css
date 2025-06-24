@@ -1,20 +1,23 @@
-/* ========== STYLES POUR LA PAGE CV ========== */
-/* Présentation générale */
+/* ========== MA PAGE CV ========== */
+
+/* Mon style général */
 .cv-page {
-  background: #fae6b437;  /* Fond légèrement teinté */
-  padding: 0px;          /* Espace intérieur */
-  color: white;           /* Couleur du texte en blanc */
+  background: #fae6b437;
+  padding: 0;
+  color: white;
 }
 
+/* Ma carte de présentation */
 .card-presentation {
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(52, 51, 79, 0.2);
-  background: #3cb0b0d5;  /* Fond turquoise semi-transparent */
-  padding: 1px;
-  padding-right: 50px;         /* Espace intérieur */
-  color: white;           /* Couleur du texte en blanc */
+  background: #3cb0b0d5;
+  text-align: center;
+  padding: 15px;
+  color: white;
 }
 
+/* Ma structure de page */
 .cv-wrapper {
   flex: 1;
   display: flex;
@@ -25,86 +28,79 @@
   flex: 1;
 }
 
+/* Mon pied de page */
 .cv-page .page-footer {
   background-color: #5ccfd4;
   margin: 0;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 10px 0;
 }
 
-/* Espacement des sections */
+/* Mes sections */
 .section {
   margin: 50px 0;
 }
 
-/* Timeline verticale */
+/* Ma timeline verticale */
 .timeline {
-  position: relative;     /* Pour positionner la ligne verticale */
-  padding: 20px 0;        /* Espace au-dessus et en-dessous */
+  position: relative;
+  padding: 20px 0;
   margin-top: 40px;
 }
 
-/* Ligne verticale centrée */
+/* Ma ligne verticale centrale */
 .timeline:before {
   content: '';
   position: absolute;
-  left: 50%;              /* Centre la ligne */
+  left: 50%;
   top: 0;
   bottom: 0;
   width: 4px;
-  margin-left: -2px;      /* Ajustement pour centrer parfaitement */
-  background: linear-gradient(to bottom, #529b9b, #7ddede);  /* Dégradé turquoise */
+  margin-left: -2px;
+  background: linear-gradient(to bottom, #529b9b, #7ddede);
 }
 
-/* Modification spécifique pour la timeline des stages */
-.stage-timeline:before {
-  height: calc(100% + 50px); /* Étend la ligne 50px plus bas */
-  bottom: -50px; /* Force la ligne à descendre plus bas */
-}
-
-/* Style pour chaque élément de la timeline */
+/* Mes éléments de timeline */
 .timeline-item {
   position: relative;
   margin-bottom: 50px;
   clear: both;
   width: 100%;
-  display: flex;          /* Utiliser flexbox pour l'alignement */
-  align-items: center;    /* Centrer verticalement les éléments */
+  display: flex;
+  align-items: center;
 }
 
-/* Style pour les éléments à droite */
+/* Mes éléments à droite */
 .timeline-item.right {
-  flex-direction: row-reverse; /* Inverser l'ordre pour les éléments à droite */
+  flex-direction: row-reverse;
 }
 
-/* Style pour les dates */
+/* Mes dates dans la timeline */
 .timeline-date {
-  width: calc(50% - 20px); /* 50% moins l'espace pour la ligne centrale */
+  width: calc(50% - 20px);
   text-align: right;
-  padding-right: 40px;    /* Espace entre la date et la ligne centrale */
-  color: #f18192;         /* Couleur rose */
+  padding-right: 40px;
+  color: #f18192;
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 30px;
   line-height: 1.5;
   box-sizing: border-box;
-  font-size: 30px;
 }
 
-/* Style pour le contenu de chaque élément */
+/* Mon contenu de timeline */
 .timeline-content {
   position: relative;
-  width: calc(50% - 20px); /* 50% moins l'espace pour la ligne centrale */
+  width: calc(50% - 20px);
   padding: 20px;
   background-color: white;
   border-radius: 8px;
   box-shadow: 0 3px 10px rgba(0,0,0,0.1);
   color: #000;
   font-family: Arial, Helvetica, sans-serif;
-  margin-left: 40px;      /* Espace entre la ligne centrale et la carte */
+  margin-left: 40px;
   box-sizing: border-box;
 }
 
-/* Point sur la timeline */
+/* Mes points sur la timeline */
 .timeline-point {
   position: absolute;
   left: 50%;
@@ -112,24 +108,24 @@
   height: 20px;
   border-radius: 50%;
   background-color: white;
-  border: 4px solid #f18192;  /* Bordure rose */
-  transform: translateX(-50%); /* Centrer horizontalement */
-  z-index: 2;             /* Au-dessus de la ligne */
+  border: 4px solid #f18192;
+  transform: translateX(-50%);
+  z-index: 2;
 }
 
-/* Élément à droite de la timeline */
+/* Ajustements pour les éléments à droite */
 .timeline-item.right .timeline-date {
   text-align: left;
   padding-right: 0;
-  padding-left: 40px;     /* Espace entre la date et la ligne centrale */
+  padding-left: 40px;
 }
 
 .timeline-item.right .timeline-content {
   margin-left: 0;
-  margin-right: 40px;     /* Espace entre la ligne centrale et la carte */
+  margin-right: 40px;
 }
 
-/* Titres dans la timeline */
+/* Mes titres dans la timeline */
 .timeline-content h3 {
   margin-top: 0;
   color: #26a69a;
@@ -138,48 +134,14 @@
 
 .timeline-content h4 {
   font-size: 1.2rem;
-  color: #f18192;  /* Couleur rose pour les sous-titres */
+  color: #f18192;
 }
 
-.timeline-section {
-  margin-bottom: 40px;    /* Espace entre les sections */
-}
-
-/* Barres de compétences */
-.skills-section {
-  margin-top: 60px;       /* Espace au-dessus */
-}
-
-.progress {
-  height: 10px;           /* Hauteur de la barre */
-  border-radius: 5px;     /* Coins arrondis */
-  background-color: #eee;  /* Fond gris clair */
-}
-
-.progress .determinate {
-  background: linear-gradient(to right, #7873f5, #3c8ce7);  /* Dégradé violet vers bleu */
-  border-radius: 5px;     /* Coins arrondis */
-}
-
-/* Correction pour la timeline de la section stages */
-#stage .timeline:before {
-  bottom: -50px; /* Étend la ligne verticale plus bas */
-}
-
-/* Correction pour le footer */
-.page-footer {
-  width: 100%;
-  left: 0;
-  right: 0;
-  position: relative;
-  margin-top: 50px;
-}
-
-/* Media queries pour la timeline responsive */
+/* Mon design responsive */
 @media only screen and (max-width: 768px) {
-  /* Ajustement de la timeline pour les écrans plus petits */
+  /* Timeline adaptée pour tablettes */
   .timeline:before {
-    left: 30px;           /* Déplace la ligne à gauche */
+    left: 30px;
     margin-left: 0;
   }
   
@@ -192,8 +154,8 @@
   .timeline-point {
     position: absolute;
     left: 30px;
-    top: 10px;            /* Ajusté pour aligner avec la date */
-    transform: translateX(-50%); /* Centrer sur la ligne */
+    top: 10px;
+    transform: translateX(-50%);
     margin-top: 0;
   }
   
@@ -201,36 +163,37 @@
     width: 100%;
     text-align: left;
     padding: 0;
-    margin-left: 50px;    /* Ajusté pour s'aligner avec le point */
+    margin-left: 50px;
     margin-bottom: 15px;
-    font-size: 24px;      /* Taille de police réduite pour mobile */
+    font-size: 24px;
   }
   
   .timeline-content, .timeline-item.right .timeline-content {
     width: calc(100% - 50px);
-    margin-left: 50px;    /* Aligné avec la date */
+    margin-left: 50px;
     margin-right: 0;
   }
 }
 
 @media only screen and (max-width: 600px) {
+  /* Timeline adaptée pour smartphones */
   .timeline:before {
-    left: 20px;           /* Ajuste encore la position de la ligne */
+    left: 20px;
   }
   
   .timeline-point {
-    left: 20px;           /* Aligné avec la ligne */
-    width: 16px;          /* Point plus petit */
-    height: 16px;         /* Point plus petit */
+    left: 20px;
+    width: 16px;
+    height: 16px;
   }
   
   .timeline-date, .timeline-item.right .timeline-date {
-    margin-left: 35px;    /* Ajusté pour s'aligner avec le point */
-    font-size: 20px;      /* Encore plus petit sur très petits écrans */
+    margin-left: 35px;
+    font-size: 20px;
   }
   
   .timeline-content, .timeline-item.right .timeline-content {
     width: calc(100% - 35px);
-    margin-left: 35px;    /* Aligné avec la date */
+    margin-left: 35px;
   }
 }

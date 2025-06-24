@@ -1,10 +1,12 @@
-/* Styles pour la page Jeux */
+/* ========== MA PAGE DE SERIOUS GAMES ========== */
+
+/* Mon style général */
 .jeux-page {
   background-color: #fae6b437;
   color: white;
 }
 
-/* Titre principal */
+/* Mon titre principal */
 .jeux-title {
   color: #f18192;
   text-align: center;
@@ -13,41 +15,31 @@
   font-size: 60px;
 }
 
-/* Titres de section */
+/* Mes titres de section */
 .section-title {
   color: #3cb0b0d5;
   text-align: center;
   margin-bottom: 30px;
 }
 
-/* Carte de présentation */
-.presentation-card {
-  background-color: #3cb0b0d5;
-  border-radius: 8px;
-  padding: 20px;
-  margin-bottom: 50px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  color: white;
-  text-align: center;
-}
-
-/* Section du jeu */
+/* Ma section de jeu */
 .game-section {
   margin-bottom: 60px;
 }
 
-/* Description du jeu */
+/* Ma description du jeu */
 .game-description {
   text-align: center;
   color: #333;
   margin-bottom: 30px;
   font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Bouton pour lancer le jeu */
+/* Mon bouton de jeu */
 .game-btn {
   display: inline-block;
-  background-color: #e06d7e; /* Couleur foncée par défaut */
+  background-color: #e06d7e;
   color: white;
   padding: 12px 30px;
   border-radius: 30px;
@@ -58,7 +50,7 @@
 }
 
 .game-btn:hover {
-  background-color: #f18192; /* Couleur plus claire au survol */
+  background-color: #f18192;
 }
 
 .game-btn:focus {
@@ -70,7 +62,7 @@
   background-color: #f18192;
 }
 
-/* Conteneur pour la capture d'écran et le bouton simplifié */
+/* Mon conteneur de capture d'écran */
 .game-screenshot-container {
   position: relative;
   max-width: 1200px;
@@ -80,17 +72,17 @@
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* Style de l'image de capture d'écran */
+/* Ma capture d'écran */
 .game-screenshot {
   width: 100%;
   height: auto;
   display: block;
 }
 
-/* Bouton fixe en bas au centre */
+/* Mon bouton fixe */
 .fixed-btn {
   position: absolute;
-  bottom: 25px; /* Position légèrement plus haute par défaut */
+  bottom: 25px;
   left: 50%;
   transform: translateX(-50%);
   margin-top: 0;
@@ -99,37 +91,11 @@
   transition: transform 0.2s ease, background-color 0.3s ease;
 }
 
-/* Effet de survol pour le bouton fixe */
 .fixed-btn:hover {
-  transform: translateX(-50%) translateY(3px); /* Déplacement vers le bas au survol */
+  transform: translateX(-50%) translateY(3px);
 }
 
-/* Instructions */
-.game-instructions {
-  margin-top: 40px;
-  color: #333;
-}
-
-.game-instructions h3 {
-  color: #3cb0b0d5;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.game-instructions ul {
-  background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 8px;
-  padding: 20px 40px;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.game-instructions li {
-  margin-bottom: 10px;
-  font-size: 16px;
-}
-
-/* Style pour l'icône d'aide simplifiée */
+/* Mon icône d'aide */
 .help-icon {
   position: absolute;
   top: 15px;
@@ -148,7 +114,7 @@
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
-/* Style pour la boîte d'aide simplifiée */
+/* Ma boîte d'aide */
 .help-box {
   position: fixed;
   top: 50%;
@@ -165,10 +131,11 @@
 
 .help-box-content {
   color: #333;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .help-box-content h4 {
-  color: #3cb0b0d5;
+  color: #f18192;
   margin-top: 0;
   margin-bottom: 20px;
   text-align: center;
@@ -182,15 +149,7 @@
   margin-bottom: 10px;
 }
 
-.close-help {
-  float: right;
-  cursor: pointer;
-  font-weight: bold;
-  color: #999;
-  font-size: 18px;
-}
-
-/* Footer */
+/* Mon pied de page */
 .page-footer {
   background-color: #5ccfd4;
   padding: 20px 0;
@@ -199,44 +158,7 @@
   box-sizing: border-box;
 }
 
-/* Responsive */
-@media only screen and (max-width: 600px) {
-  .jeux-title {
-    font-size: 40px;
-    margin-top: 60px;
-    margin-bottom: 30px;
-  }
-  
-  .game-container {
-    height: 400px;
-  }
-  
-  .game-btn {
-    font-size: 16px;
-    padding: 10px 25px;
-  }
-  
-  .game-instructions ul {
-    padding: 15px 25px;
-  }
-  
-  .game-instructions li {
-    font-size: 14px;
-  }
-}
-
-/* Styles pour les écrans moyens */
-@media only screen and (max-width: 768px) and (min-width: 601px) {
-  .jeux-title {
-    font-size: 50px;
-  }
-  
-  .game-screenshot-container {
-    max-width: 200%;
-  }
-}
-
-/* Animation pour le bouton */
+/* Mon animation pour le bouton */
 @keyframes pulse {
   0% {
     transform: translateX(-50%) scale(1);
@@ -249,7 +171,30 @@
   }
 }
 
-/* Effet de pulsation sur le bouton au chargement de la page */
 .fixed-btn.pulse {
   animation: pulse 2s infinite;
+}
+
+/* Mon design responsive */
+@media only screen and (max-width: 600px) {
+  .jeux-title {
+    font-size: 40px;
+    margin-top: 60px;
+    margin-bottom: 30px;
+  }
+  
+  .game-btn {
+    font-size: 16px;
+    padding: 10px 25px;
+  }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 601px) {
+  .jeux-title {
+    font-size: 50px;
+  }
+  
+  .game-screenshot-container {
+    max-width: 200%;
+  }
 }
