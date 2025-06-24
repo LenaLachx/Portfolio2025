@@ -167,15 +167,21 @@
       });
     });
     
-    // Pour ouvrir la prévisualisation PDF
     function openPdfPreview(pdfUrl, title) {
-      document.getElementById('pdf-preview-title').textContent = title;
-      document.getElementById('pdf-preview-object').setAttribute('data', pdfUrl);
-      document.getElementById('pdf-preview-fallback-link').setAttribute('href', pdfUrl);
-      document.getElementById('pdf-preview-overlay').style.display = 'flex';
-      document.body.style.overflow = 'hidden';
-    }
-    
+  document.getElementById('pdf-preview-title').textContent = title;
+
+  // Force le rechargement du PDF en recréant complètement l'object
+  const previewContainer = document.querySelector('.pdf-preview-content');
+  previewContainer.innerHTML = `
+    <object id="pdf-preview-object" type="application/pdf" data="${pdfUrl}" width="100%" height="600px">
+      <p>Votre navigateur ne prend pas en charge l'affichage des PDF.
+        <a id="pdf-preview-fallback-link" href="${pdfUrl}" download>Téléchargez le PDF</a> à la place.</p>
+    </object>
+  `;
+
+  document.getElementById('pdf-preview-overlay').style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+}
     // Pour fermer la prévisualisation PDF
     function closePdfPreview() {
       document.getElementById('pdf-preview-overlay').style.display = 'none';
